@@ -1,0 +1,11 @@
+framework module PCIWidget {
+  umbrella header "PCIWidget.h"
+
+  export *
+  module * { export * }
+}
+
+module PCIWidget.Swift {
+  header "PCIWidget-Swift.h"
+  requires objc
+}

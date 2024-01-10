@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_BASE_URL_ENDPOINT</key>
+	<string>$(API_BASE_URL_ENDPOINT)</string>
+	<key>AUTH_KEY</key>
+	<string>$(AUTH_KEY)</string>
+	<key>CARD_SDK_PRODUCTION</key>
+	<string>$(CARD_SDK_PRODUCTION)</string>
+	<key>DIGI_LOCKER_BASE_URL</key>
+	<string>$(DIGI_LOCKER_BASE_URL)</string>
+	<key>ENCRYPTION_ENABLED</key>
+	<string>$(ENCRYPTION_ENABLED)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>undecimus</string>
+		<string>sileo</string>
+		<string>zbra</string>
+		<string>filza</string>
+		<string>activator</string>
+		<string>cydia</string>
+		<string>upi</string>
+		<string>livquik.quikwallet.ios</string>
+		<string>com.amazon.mobile.shopping</string>
+		<string>gpay</string>
+		<string>paytm</string>
+		<string>phonepe</string>
+		<string>tez</string>
+	</array>
+	<key>SSL_CERTIFICATE</key>
+	<string>$(SSL_CERTIFICATE)</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Rubik-Bold.ttf</string>
+		<string>Rubik-Light.ttf</string>
+		<string>Rubik-Medium.ttf</string>
+		<string>Rubik-Regular.ttf</string>
+		<string>Rubik-SemiBold.ttf</string>
+	</array>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>VKYC_CALLBACK</key>
+	<string>$(VKYC_CALLBACK)</string>
+</dict>
+</plist>

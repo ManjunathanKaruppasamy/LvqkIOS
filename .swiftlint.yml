@@ -1,0 +1,68 @@
+
+disabled_rules:
+  - redundant_objc_attribute
+  - attributes
+  - valid_ibinspectable
+  - redundant_string_enum_value
+  - trailing_whitespace
+  - nesting
+
+  # Remove:
+  - unused_closure_parameter
+  - explicit_type_interface
+
+opt_in_rules: # some rules are only opt-in
+  - todo
+  - identifier_name
+  - conditional_returns_on_newline
+  - cyclomatic_complexity
+  - line_length
+  - unused_optional_binding
+  - explicit_type_interface
+  - force_unwrapping
+  - implicit_return
+  - closure_end_indentation
+  - closure_spacing
+  - empty_string
+  - contains_over_first_not_nil
+  - missing_docs
+  - colon
+  - large_tuple
+  - block_based_kvo
+  - function_body_length
+  - function_parameter_count
+  - file_length
+  - vertical_whitespace
+  - force_try
+  - force_cast
+   - empty_count
+#   - first_where
+  
+excluded:
+  - Carthage
+  - Pods
+
+  - UnitTests
+  - UITests
+  - Frameworks
+  - aws-sdk-ios
+  - realm-cocoa
+  - .*\\.c
+
+#force_cast: warning
+#force_try: warning
+
+# - Force explicity type for every variable on the project, this is needed to let the Swift compiler more lightweight
+# explicit_type_interface:
+#  severity: warning
+
+type_body_length:
+  - 400 # warning
+  - 450 # error
+
+line_length:
+    warning: 300
+    error: 350
+    ignores_function_declarations: true
+    ignores_comments: true
+    ignores_urls: true

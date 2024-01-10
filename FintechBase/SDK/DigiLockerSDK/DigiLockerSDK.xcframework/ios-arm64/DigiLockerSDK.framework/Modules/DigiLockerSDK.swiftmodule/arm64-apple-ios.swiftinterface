@@ -1,0 +1,46 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DigiLockerSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+@_exported import DigiLockerSDK
+import Foundation
+import Swift
+import SystemConfiguration
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+public protocol DigiLockerProtocol : AnyObject {
+  static var shared: DigiLockerSDK.DigiLockerProtocol { get }
+  var authKey: Swift.String? { get set }
+  var apiKey: Swift.String? { get set }
+  func present(from parentController: UIKit.UIViewController)
+  func dismiss()
+  var onSDKCompletion: ((_ isSucess: Swift.Bool, _ resultDic: Swift.String?) -> Swift.Void)? { get set }
+  var documentType: DigiLockerSDK.DocumentType? { get set }
+  var apiBaseURL: Swift.String? { get set }
+}
+public class DigiLocker : DigiLockerSDK.DigiLockerProtocol {
+  public init()
+  public static var shared: DigiLockerSDK.DigiLockerProtocol
+  public var authKey: Swift.String?
+  public var apiKey: Swift.String?
+  public var onSDKCompletion: ((_ isSucess: Swift.Bool, _ resultModel: Swift.String?) -> Swift.Void)?
+  public var documentType: DigiLockerSDK.DocumentType?
+  public var apiBaseURL: Swift.String?
+  public func present(from parentController: UIKit.UIViewController)
+  public func dismiss()
+  @objc deinit
+}
+public enum DocumentType : Swift.String {
+  case aadhar
+  case pan
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension DigiLockerSDK.DocumentType : Swift.Equatable {}
+extension DigiLockerSDK.DocumentType : Swift.Hashable {}
+extension DigiLockerSDK.DocumentType : Swift.RawRepresentable {}

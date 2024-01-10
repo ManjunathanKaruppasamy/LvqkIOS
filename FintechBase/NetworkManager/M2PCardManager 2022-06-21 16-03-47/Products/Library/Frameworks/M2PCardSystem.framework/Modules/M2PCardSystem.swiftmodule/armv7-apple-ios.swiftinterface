@@ -1,0 +1,302 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name M2PCardSystem
+import CoreLocation
+import CryptoKit
+import Foundation
+import LocalAuthentication
+@_exported import M2PCardSystem
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import WebKit
+import _Concurrency
+extension UIKit.UIViewController {
+  @available(iOS 12.0, *)
+  @_Concurrency.MainActor(unsafe) public func overrideStyle(style: UIKit.UIUserInterfaceStyle = .light)
+}
+extension UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var shouldAutorotate: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var preferredInterfaceOrientationForPresentation: UIKit.UIInterfaceOrientation {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+}
+extension Swift.Array {
+  public func toDictionary<Key>(with selectKey: (Element) -> Key) -> [Key : Element] where Key : Swift.Hashable
+}
+public class M2PCD : M2PCardSystem.M2PCDProtocol {
+  public var m2pViewPageSeconds: Swift.Int?
+  public var m2pCardLogo: UIKit.UIImage?
+  public var m2pTenantName: Swift.String?
+  public static var shared: M2PCardSystem.M2PCDProtocol
+  public init()
+  public var m2pRequestparam: [Swift.String : Any]?
+  public var m2pCardBgImage: UIKit.UIImage?
+  public var m2pEnableBioMetric: Swift.Bool?
+  public var themeColorHexString: Swift.String?
+  public var invokeSDKFrom: M2PCardSystem.flowEnum?
+  public var MPINLogged: Swift.Bool?
+  public var entityID: Swift.String?
+  public func present(from parentController: UIKit.UIViewController)
+  public func dismiss()
+  public var mpinClouser: ((Swift.String?) -> Swift.String)?
+  public var helpDeskClouser: ((Swift.String?) -> ())?
+  public func MPINValidate(pin: Swift.String?, callback: @escaping ((Swift.Bool) -> Swift.Void))
+  @objc deinit
+}
+public protocol OTPFieldViewDelegate : AnyObject {
+  func shouldBecomeFirstResponderForOTP(otpTextFieldIndex index: Swift.Int) -> Swift.Bool
+  func enteredOTP(otp: Swift.String, otpView: M2PCardSystem.OTPFieldView)
+  func hasEnteredAllOTP(hasEnteredAll: Swift.Bool) -> Swift.Bool
+}
+@objc public enum DisplayType : Swift.Int {
+  case circular
+  case roundedCorner
+  case square
+  case diamond
+  case underlinedBottom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum KeyboardType : Swift.Int {
+  case numeric
+  case alphabet
+  case alphaNumeric
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class OTPFieldView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var displayType: M2PCardSystem.DisplayType
+  @_Concurrency.MainActor(unsafe) public var fieldsCount: Swift.Int
+  @_Concurrency.MainActor(unsafe) public var otpInputType: M2PCardSystem.KeyboardType
+  @_Concurrency.MainActor(unsafe) public var fieldFont: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) public var secureEntry: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var hideEnteredText: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var requireCursor: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var cursorColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var fieldSize: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public var separatorSpace: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public var fieldBorderWidth: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public var shouldAllowIntermediateEditing: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var defaultBackgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var filledBackgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var defaultBorderColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var filledBorderColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var errorBorderColor: UIKit.UIColor?
+  @_Concurrency.MainActor(unsafe) public var errorColor: UIKit.UIColor?
+  @_Concurrency.MainActor(unsafe) public var otpTextColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var fromView: M2PCardSystem.OTPFieldView?
+  @_Concurrency.MainActor(unsafe) public var callLayoutSubviews: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var fieldTobeCentre: Swift.Bool
+  @_Concurrency.MainActor(unsafe) weak public var delegate: M2PCardSystem.OTPFieldViewDelegate?
+  @_Concurrency.MainActor(unsafe) public var OTPString: Swift.String?
+  @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func initializeUI(setResponder: Swift.Bool? = false)
+  @_Concurrency.MainActor(unsafe) public func initializeUIWithSetValues(values: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func initializeOTPFields()
+  @_Concurrency.MainActor(unsafe) public func initializeOTPFieldsWithValue(values: Swift.String?)
+  @_Concurrency.MainActor(unsafe) public func showError()
+  @_Concurrency.MainActor(unsafe) public func hideError()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension M2PCardSystem.OTPFieldView : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldShouldBeginEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+public protocol M2PCDProtocol {
+  var m2pViewPageSeconds: Swift.Int? { get set }
+  static var shared: M2PCardSystem.M2PCDProtocol { get }
+  var m2pCardBgImage: UIKit.UIImage? { get set }
+  var m2pEnableBioMetric: Swift.Bool? { get set }
+  var m2pCardLogo: UIKit.UIImage? { get set }
+  var m2pTenantName: Swift.String? { get set }
+  var m2pRequestparam: [Swift.String : Any]? { get set }
+  func present(from parentController: UIKit.UIViewController)
+  func dismiss()
+  var themeColorHexString: Swift.String? { get set }
+  var mpinClouser: ((Swift.String?) -> Swift.String)? { get set }
+  var helpDeskClouser: ((Swift.String?) -> ())? { get set }
+  var invokeSDKFrom: M2PCardSystem.flowEnum? { get set }
+  var MPINLogged: Swift.Bool? { get set }
+  var entityID: Swift.String? { get set }
+}
+@_inheritsConvenienceInitializers @objc open class RPicker : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum flowEnum : Swift.String, Swift.CaseIterable {
+  case Onboarding
+  case Landing
+  case SetPIN
+  case BlockReplace
+  case ServiceRequest
+  case ApplyCard
+  case ManageTokens
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [M2PCardSystem.flowEnum]
+  public typealias RawValue = Swift.String
+  public static var allCases: [M2PCardSystem.flowEnum] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum COAButtonEnum : Swift.String, Swift.CaseIterable {
+  case SetPin
+  case CardPreference
+  case Transaction
+  case Offers
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [M2PCardSystem.COAButtonEnum]
+  public typealias RawValue = Swift.String
+  public static var allCases: [M2PCardSystem.COAButtonEnum] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum CardStatusEnum : Swift.String, Swift.CaseIterable {
+  case Block
+  case Unblock
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [M2PCardSystem.CardStatusEnum]
+  public typealias RawValue = Swift.String
+  public static var allCases: [M2PCardSystem.CardStatusEnum] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum dialogueEnum : Swift.String, Swift.CaseIterable {
+  case Primary
+  case Secondary
+  case Close
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [M2PCardSystem.dialogueEnum]
+  public typealias RawValue = Swift.String
+  public static var allCases: [M2PCardSystem.dialogueEnum] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum generatePINEnum : Swift.String, Swift.CaseIterable {
+  case SUPERPIN
+  case SUPEROTP
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [M2PCardSystem.generatePINEnum]
+  public typealias RawValue = Swift.String
+  public static var allCases: [M2PCardSystem.generatePINEnum] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum PlasticCodeEnum : Swift.String, Swift.CaseIterable {
+  case NUM_LESS
+  case NUM_001
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [M2PCardSystem.PlasticCodeEnum]
+  public typealias RawValue = Swift.String
+  public static var allCases: [M2PCardSystem.PlasticCodeEnum] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ConsentEnum : Swift.String, Swift.CaseIterable {
+  case SuperPIN
+  case SuperOTP
+  case SwipeToPay
+  case LocationShield
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [M2PCardSystem.ConsentEnum]
+  public typealias RawValue = Swift.String
+  public static var allCases: [M2PCardSystem.ConsentEnum] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum DeliveryEnum : Swift.String, Swift.CaseIterable {
+  case BLUEDART
+  case SPEEDPOST
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [M2PCardSystem.DeliveryEnum]
+  public typealias RawValue = Swift.String
+  public static var allCases: [M2PCardSystem.DeliveryEnum] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TrackStatusEnum : Swift.String, Swift.CaseIterable {
+  case DELIVERED
+  case RETURNTOBANK
+  case DELIVERYUNSUCCESSFUL
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [M2PCardSystem.TrackStatusEnum]
+  public typealias RawValue = Swift.String
+  public static var allCases: [M2PCardSystem.TrackStatusEnum] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension M2PCardSystem.DisplayType : Swift.Equatable {}
+extension M2PCardSystem.DisplayType : Swift.Hashable {}
+extension M2PCardSystem.DisplayType : Swift.RawRepresentable {}
+extension M2PCardSystem.KeyboardType : Swift.Equatable {}
+extension M2PCardSystem.KeyboardType : Swift.Hashable {}
+extension M2PCardSystem.KeyboardType : Swift.RawRepresentable {}
+extension M2PCardSystem.flowEnum : Swift.Equatable {}
+extension M2PCardSystem.flowEnum : Swift.Hashable {}
+extension M2PCardSystem.flowEnum : Swift.RawRepresentable {}
+extension M2PCardSystem.COAButtonEnum : Swift.Equatable {}
+extension M2PCardSystem.COAButtonEnum : Swift.Hashable {}
+extension M2PCardSystem.COAButtonEnum : Swift.RawRepresentable {}
+extension M2PCardSystem.CardStatusEnum : Swift.Equatable {}
+extension M2PCardSystem.CardStatusEnum : Swift.Hashable {}
+extension M2PCardSystem.CardStatusEnum : Swift.RawRepresentable {}
+extension M2PCardSystem.dialogueEnum : Swift.Equatable {}
+extension M2PCardSystem.dialogueEnum : Swift.Hashable {}
+extension M2PCardSystem.dialogueEnum : Swift.RawRepresentable {}
+extension M2PCardSystem.generatePINEnum : Swift.Equatable {}
+extension M2PCardSystem.generatePINEnum : Swift.Hashable {}
+extension M2PCardSystem.generatePINEnum : Swift.RawRepresentable {}
+extension M2PCardSystem.PlasticCodeEnum : Swift.Equatable {}
+extension M2PCardSystem.PlasticCodeEnum : Swift.Hashable {}
+extension M2PCardSystem.PlasticCodeEnum : Swift.RawRepresentable {}
+extension M2PCardSystem.ConsentEnum : Swift.Equatable {}
+extension M2PCardSystem.ConsentEnum : Swift.Hashable {}
+extension M2PCardSystem.ConsentEnum : Swift.RawRepresentable {}
+extension M2PCardSystem.DeliveryEnum : Swift.Equatable {}
+extension M2PCardSystem.DeliveryEnum : Swift.Hashable {}
+extension M2PCardSystem.DeliveryEnum : Swift.RawRepresentable {}
+extension M2PCardSystem.TrackStatusEnum : Swift.Equatable {}
+extension M2PCardSystem.TrackStatusEnum : Swift.Hashable {}
+extension M2PCardSystem.TrackStatusEnum : Swift.RawRepresentable {}

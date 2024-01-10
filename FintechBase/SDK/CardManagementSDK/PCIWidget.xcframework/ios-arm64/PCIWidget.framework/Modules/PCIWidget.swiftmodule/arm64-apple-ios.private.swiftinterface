@@ -1,0 +1,945 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PCIWidget
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CryptoKit
+import Foundation
+import LocalAuthentication
+@_exported import PCIWidget
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+public enum M2PSDKEnvironment {
+  case UAT
+  case PROD
+  public static func == (a: PCIWidget.M2PSDKEnvironment, b: PCIWidget.M2PSDKEnvironment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum M2PFlowType {
+  case card
+  case statements
+  case dispute
+  public static func == (a: PCIWidget.M2PFlowType, b: PCIWidget.M2PFlowType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class M2PColorSystem {
+  public init()
+  public var colorsList: [Swift.String : Any]?
+  public func M2PConfigureColor(jsonFileName: Swift.String? = nil)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FetchComponentColor {
+  public var colorsList: [Swift.String : Any]?
+  @objc deinit
+}
+extension Foundation.Bundle {
+  public static func localizedBundle() -> Foundation.Bundle!
+  public static func setLanguage(lang: Swift.String)
+}
+@objc @IBDesignable @_Concurrency.MainActor(unsafe) open class TagView : UIKit.UIButton {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var cornerRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var borderWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var borderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var textColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var selectedTextColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var titleLineBreakMode: UIKit.NSLineBreakMode {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var paddingY: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var paddingX: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var tagBackgroundColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var highlightedBackgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var selectedBorderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var selectedBackgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var textFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isHighlighted: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var enableRemoveButton: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var removeButtonIconSize: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var removeIconLineWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var removeIconLineColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var onTap: ((PCIWidget.TagView) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) open var onLongPress: ((PCIWidget.TagView) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public init(title: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
+public class M2PButtonConfigModel {
+  public var title: Swift.String?
+  public var primaryIcon: UIKit.UIImage?
+  public var secondaryIcon: UIKit.UIImage?
+  public var titleFont: UIKit.UIFont
+  public var colorConfig: PCIWidget.M2PButtonColorConfigModel
+  public var iconSize: CoreFoundation.CGFloat
+  public init(title: Swift.String?, primaryIcon: UIKit.UIImage?, secondaryIcon: UIKit.UIImage?, colorConfig: PCIWidget.M2PButtonColorConfigModel, titleFont: UIKit.UIFont = .systemFont(ofSize: 14), iconSize: CoreFoundation.CGFloat = 20)
+  @objc deinit
+}
+public class M2PButtonColorConfigModel {
+  public var backgroundActive: UIKit.UIColor?
+  public var backgroundInActive: UIKit.UIColor?
+  public var borderActive: UIKit.UIColor?
+  public var borderInActive: UIKit.UIColor?
+  public var titleActive: UIKit.UIColor?
+  public var titleInActive: UIKit.UIColor?
+  public var primaryIconActive: UIKit.UIColor?
+  public var primaryIconInActive: UIKit.UIColor?
+  public var secondaryIconActive: UIKit.UIColor?
+  public var secondaryIconInActive: UIKit.UIColor?
+  public init()
+  @objc deinit
+}
+public enum ButtonTypes {
+  case primary
+  case secondary
+  case none
+  public static func == (a: PCIWidget.ButtonTypes, b: PCIWidget.ButtonTypes) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ButtonStyle : Swift.String {
+  case text
+  case icon
+  case primaryIcon_text
+  case secondaryIcon_text
+  case icons_text
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ButtonStatus {
+  case enable
+  case disable
+  public static func == (a: PCIWidget.ButtonStatus, b: PCIWidget.ButtonStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ComponentFontSize : CoreFoundation.CGFloat {
+  case x10
+  case x11
+  case x12
+  case x13
+  case x14
+  case x15
+  case x16
+  case x17
+  case x18
+  case x20
+  case x22
+  case x25
+  case x28
+  case x34
+  public init?(rawValue: CoreFoundation.CGFloat)
+  public typealias RawValue = CoreFoundation.CGFloat
+  public var rawValue: CoreFoundation.CGFloat {
+    get
+  }
+}
+extension UIKit.UIFont {
+  public static func customFont(name: Swift.String, size: PCIWidget.ComponentFontSize) -> UIKit.UIFont
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class M2PDatePicker : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public static var shared: PCIWidget.M2PDatePicker
+  @_Concurrency.MainActor(unsafe) public var getSelectedDate: ((Foundation.Date?) -> ())?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension PCIWidget.M2PDatePicker {
+  @_Concurrency.MainActor(unsafe) public func m2pAddDatePicker(backGroundColor: UIKit.UIColor, textColor: UIKit.UIColor, minDate: Foundation.Date? = nil, maxDate: Foundation.Date? = nil, selectedDate: Foundation.Date? = nil, height: Swift.Double? = nil)
+}
+extension UIKit.UIColor {
+  convenience public init?(hex: Swift.String)
+}
+public protocol M2PCDProtocol {
+  static var shared: any PCIWidget.M2PCDProtocol { get }
+  var m2pSDKEnvironment: PCIWidget.M2PSDKEnvironment? { get set }
+  var flowType: PCIWidget.M2PFlowType? { get set }
+  var m2pViewPageSeconds: Swift.Int? { get set }
+  var m2pCardBgImage: UIKit.UIImage? { get set }
+  var m2pEnableBioMetric: Swift.Bool? { get set }
+  var m2pCardLogo: UIKit.UIImage? { get set }
+  var m2pTenantName: Swift.String? { get set }
+  var m2pUserNationalID: Swift.String? { get set }
+  var m2pUserMobileNo: Swift.String? { get set }
+  var m2pUserPhoneCountryCode: Swift.String? { get set }
+  var m2pCDParams: [Swift.String : Any]? { get set }
+  var onRegistrationResult: ((_ result: Swift.Bool, _ entityId: Swift.String?, _ kitNo: Swift.String?, _ token: Swift.String?) -> Swift.Void)? { get set }
+  func present(from parentController: UIKit.UIViewController)
+  func dismiss()
+  var onSDKClose: ((_ message: Swift.String) -> Swift.Void)? { get set }
+  var onTrackID: ((_ id: Swift.String) -> Swift.Void)? { get set }
+  var onTransactionDetailImage: ((_ image: UIKit.UIImage) -> Swift.Void)? { get set }
+  var supportContactNumber: Swift.String? { get set }
+  var themeColorHexString: Swift.String? { get set }
+  var configurationSettings: [Swift.String]? { get set }
+  var brandLogoImage: UIKit.UIImage? { get set }
+  var serverPublicString: Swift.String? { get set }
+  var dynamicURLString: Swift.String? { get set }
+  var privateKeyString: Swift.String? { get set }
+  var language: Swift.String? { get set }
+}
+public class M2PCD : PCIWidget.M2PCDProtocol {
+  public static var shared: any PCIWidget.M2PCDProtocol
+  public init()
+  public var m2pSDKEnvironment: PCIWidget.M2PSDKEnvironment?
+  public var flowType: PCIWidget.M2PFlowType?
+  public var m2pUserNationalID: Swift.String?
+  public var m2pUserMobileNo: Swift.String?
+  public var language: Swift.String?
+  public var m2pViewPageSeconds: Swift.Int?
+  public var m2pCardLogo: UIKit.UIImage?
+  public var m2pUserPhoneCountryCode: Swift.String?
+  public var m2pTenantName: Swift.String?
+  public var m2pCDParams: [Swift.String : Any]?
+  public var m2pCardBgImage: UIKit.UIImage?
+  public var m2pEnableBioMetric: Swift.Bool?
+  public var supportContactNumber: Swift.String?
+  public var themeColorHexString: Swift.String?
+  public var brandLogoImage: UIKit.UIImage?
+  public var serverPublicString: Swift.String?
+  public var dynamicURLString: Swift.String?
+  public var privateKeyString: Swift.String?
+  public var configurationSettings: [Swift.String]?
+  public var onRegistrationResult: ((Swift.Bool, Swift.String?, Swift.String?, Swift.String?) -> Swift.Void)?
+  public var onSDKClose: ((_ message: Swift.String) -> Swift.Void)?
+  public var onTrackID: ((_ id: Swift.String) -> Swift.Void)?
+  public var onTransactionDetailImage: ((_ image: UIKit.UIImage) -> Swift.Void)?
+  public func present(from parentController: UIKit.UIViewController)
+  public func dismiss()
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) open class M2PBottomSheetNavigationController : UIKit.UINavigationController, PCIWidget.M2PBottomPopupAttributesDelegate {
+  @_Concurrency.MainActor(unsafe) weak open var popupDelegate: (any PCIWidget.M2PBottomPopupDelegate)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) open var M2PPopupHeight: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var M2PPopupTopCornerRadius: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var M2PPopupPresentDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var M2PPopupDismissDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var M2PPopupShouldDismissInteractivelty: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var M2PPopupDimmingViewAlpha: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var M2PPopupShouldBeganDismiss: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var M2PPopupViewAccessibilityIdentifier: Swift.String {
+    get
+  }
+  @objc deinit
+}
+extension PCIWidget.M2PBottomSheetNavigationController {
+  @_Concurrency.MainActor(unsafe) open func updatePopupHeight(to height: CoreFoundation.CGFloat)
+}
+public enum Colour : Swift.String {
+  case primary
+  case secondary
+  case lightGrey
+  case black
+  case white
+  case green
+  case bordercolor
+  case grey
+  case textBlack
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum M2PInputFieldType {
+  case Default_TextField
+  case Password
+  case Dropdown
+  case CalendarDefault
+  case CalendarCustom
+  public static func == (a: PCIWidget.M2PInputFieldType, b: PCIWidget.M2PInputFieldType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum M2PInputFieldStyle {
+  case Form_Default
+  case Form_Floating
+  case BottomLine_Default
+  case BottomLine_Floating
+  public static func == (a: PCIWidget.M2PInputFieldStyle, b: PCIWidget.M2PInputFieldStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct M2PInputFieldConfig {
+  public init(title: Swift.String? = nil, placeholder: Swift.String, fieldStyle: PCIWidget.M2PInputFieldStyle, fieldFonts: PCIWidget.M2PInputFieldFontConfig? = nil, fieldColors: PCIWidget.M2PInputFieldColorConfig? = nil)
+}
+public struct M2PInputFieldFontConfig {
+  public var titleFont: UIKit.UIFont
+  public var placeHolderFont: UIKit.UIFont
+  public var valueTextFont: UIKit.UIFont
+  public var errorFont: UIKit.UIFont
+  public init()
+}
+public struct M2PInputFieldColorConfig {
+  public var title: UIKit.UIColor
+  public var placeholder: UIKit.UIColor
+  public var valueText: UIKit.UIColor
+  public var defaultBorder: UIKit.UIColor
+  public var activeBorder: UIKit.UIColor
+  public var successState: UIKit.UIColor
+  public var failureState: UIKit.UIColor
+  public var disabledState: UIKit.UIColor
+  public init()
+}
+public struct M2PFieldTypeImageConfig {
+  public var clearImage: UIKit.UIImage?
+  public var password_on: UIKit.UIImage?
+  public var password_off: UIKit.UIImage?
+  public var dropdown_default: UIKit.UIImage?
+  public var dropdown_active: UIKit.UIImage?
+  public var calendar_default: UIKit.UIImage?
+  public var calendar_active: UIKit.UIImage?
+  public init()
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class M2PButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var isEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var M2PSetContentTitleFont: UIKit.UIFont? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var M2PButtonOnAction: ((_ sender: UIKit.UIButton) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+extension PCIWidget.M2PButton {
+  @_Concurrency.MainActor(unsafe) public func M2PSetupButton(type: PCIWidget.ButtonTypes = .none, style: PCIWidget.ButtonStyle = ButtonStyle.text, config: PCIWidget.M2PButtonConfigModel)
+}
+extension PCIWidget.M2PButton {
+  @_Concurrency.MainActor(unsafe) public func M2PContentTitleColorUpdate(active: UIKit.UIColor, inActive: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) public func M2PBorderColorUpdate(active: UIKit.UIColor, inActive: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) public func M2PBackgroundColorUpdate(active: UIKit.UIColor, inActive: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) public func M2PPrimaryIconTintColorUpdate(active: UIKit.UIColor, inActive: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) public func M2PSecondaryIconTintColorUpdate(active: UIKit.UIColor, inActive: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) public func M2PButtonTitleUpdateWithState(value: Swift.String?, isEnabled: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) public func M2PPrimaryIconUpdateWithState(value: UIKit.UIImage?, isEnabled: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) public func M2PSecondaryIconUpdateWithState(value: UIKit.UIImage?, isEnabled: Swift.Bool = true)
+}
+extension PCIWidget.M2PButton {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+}
+@objc public protocol OTPFieldViewDelegate {
+  @objc func shouldBecomeFirstResponderForOTP(otpTextFieldIndex index: Swift.Int) -> Swift.Bool
+  @objc func enteredOTP(otp: Swift.String)
+  @objc func hasEnteredAllOTP(hasEnteredAll: Swift.Bool) -> Swift.Bool
+}
+@objc public enum DisplayType : Swift.Int {
+  case circular
+  case roundedCorner
+  case square
+  case diamond
+  case underlinedBottom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum KeyboardType : Swift.Int {
+  case numeric
+  case alphabet
+  case alphaNumeric
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class OTPFieldView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var displayType: PCIWidget.DisplayType
+  @_Concurrency.MainActor(unsafe) public var fieldsCount: Swift.Int
+  @_Concurrency.MainActor(unsafe) public var otpInputType: PCIWidget.KeyboardType
+  @_Concurrency.MainActor(unsafe) public var fieldFont: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) public var secureEntry: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var hideEnteredText: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var requireCursor: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var cursorColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var fieldSize: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var separatorSpace: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var fieldBorderWidth: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var shouldAllowIntermediateEditing: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var defaultBackgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var filledBackgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var defaultBorderColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var filledBorderColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var errorBorderColor: UIKit.UIColor?
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any PCIWidget.OTPFieldViewDelegate)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) public func initializeUI()
+  @_Concurrency.MainActor(unsafe) public func initializeOTPFields()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension PCIWidget.OTPFieldView : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldShouldBeginEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+@propertyWrapper public struct M2PTheme {
+  public var wrappedValue: UIKit.UIColor {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class M2PInputField : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var M2PkeyBoardType: UIKit.UIKeyboardType {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var M2PtextFieldAlignment: UIKit.NSTextAlignment {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var M2PtextFieldAutoCorrection: UIKit.UITextAutocorrectionType {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var M2PdateFormatForDatePicker: Swift.String
+  @_Concurrency.MainActor(unsafe) public var M2PonClickLeftView: (() -> ())?
+  @_Concurrency.MainActor(unsafe) public var M2PonClickRightView: (() -> ())?
+  @_Concurrency.MainActor(unsafe) public var M2PonClickFieldTypeView: ((_ type: PCIWidget.M2PInputFieldType, _ isActiveFlag: Swift.Bool) -> ())?
+  @_Concurrency.MainActor(unsafe) public var M2PdidTextFieldEditingChange: ((Swift.String?) -> ())?
+  @_Concurrency.MainActor(unsafe) public var M2PdidTextFieldValueUpdated: ((Swift.String) -> ())?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+extension PCIWidget.M2PInputField {
+  @_Concurrency.MainActor(unsafe) public func M2Psetup(type: PCIWidget.M2PInputFieldType, config: PCIWidget.M2PInputFieldConfig, fieldTypeImageConfig: PCIWidget.M2PFieldTypeImageConfig? = nil, leftImage: UIKit.UIImage? = nil, rightImage: UIKit.UIImage? = nil)
+  @_Concurrency.MainActor(unsafe) public func M2PsetTextFieldDelegate(with fieldDelegate: any UIKit.UITextFieldDelegate)
+  @_Concurrency.MainActor(unsafe) public func M2PsetTextFieldValue(with value: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func M2PgetTextFieldValue() -> Swift.String?
+  @_Concurrency.MainActor(unsafe) public func M2PshowErrorWith(message: Swift.String, icon: UIKit.UIImage? = nil, stateColor: UIKit.UIColor? = nil)
+  @_Concurrency.MainActor(unsafe) public func M2PhideErrorMessage()
+  @_Concurrency.MainActor(unsafe) public func M2PsetLeftImage(image: UIKit.UIImage?, size: CoreFoundation.CGSize? = nil)
+  @_Concurrency.MainActor(unsafe) public func M2PsetRightImage(image: UIKit.UIImage?, size: CoreFoundation.CGSize? = nil)
+  @_Concurrency.MainActor(unsafe) public func M2PSetInputFieldState(isActive: Swift.Bool)
+}
+extension PCIWidget.M2PInputField : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+extension PCIWidget.M2PInputField {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class M2PGradientView : UIKit.UIView {
+  @objc public enum Mode : Swift.Int {
+    case linear
+    case radial
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum Direction : Swift.Int {
+    case vertical
+    case horizontal
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor(unsafe) public func configure(topBorderColor: UIKit.UIColor? = .clear, bottomBorderColor: UIKit.UIColor? = .clear, rightBorderColor: UIKit.UIColor? = .clear, leftBorderColor: UIKit.UIColor? = .clear, mode: PCIWidget.M2PGradientView.Mode = .linear, direction: PCIWidget.M2PGradientView.Direction = .horizontal, colors: [UIKit.UIColor]? = [], automaticallyDims: Swift.Bool = true, dimmedColors: [UIKit.UIColor]? = [], drawsThinBorders: Swift.Bool = true, locations: [CoreFoundation.CGFloat]? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tintColorDidChange()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didMoveToWindow()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIKit.UIColor {
+  @PCIWidget.M2PTheme public static var background: UIKit.UIColor {
+    get
+  }
+  @PCIWidget.M2PTheme public static var backgroundLightVarient: UIKit.UIColor {
+    get
+  }
+  @PCIWidget.M2PTheme public static var primaryActive: UIKit.UIColor {
+    get
+  }
+  @PCIWidget.M2PTheme public static var secondaryInactive: UIKit.UIColor {
+    get
+  }
+  @PCIWidget.M2PTheme public static var linksText: UIKit.UIColor {
+    get
+  }
+  @PCIWidget.M2PTheme public static var borderDefault: UIKit.UIColor {
+    get
+  }
+  @PCIWidget.M2PTheme public static var focusedLine: UIKit.UIColor {
+    get
+  }
+  @PCIWidget.M2PTheme public static var errorLine: UIKit.UIColor {
+    get
+  }
+  @PCIWidget.M2PTheme public static var formDisableFilled: UIKit.UIColor {
+    get
+  }
+  @PCIWidget.M2PTheme public static var formDisableIcon: UIKit.UIColor {
+    get
+  }
+}
+extension UIKit.UIColor {
+  public static var primaryColor: UIKit.UIColor {
+    get
+  }
+  public static var secondaryRedColor: UIKit.UIColor {
+    get
+  }
+  public static var secondaryWhiteColor: UIKit.UIColor {
+    get
+  }
+}
+extension UIKit.UIColor {
+  public static var GreenPigment100: UIKit.UIColor {
+    get
+  }
+  public static var GreenPigment66: UIKit.UIColor {
+    get
+  }
+  public static var GreenPigment33: UIKit.UIColor {
+    get
+  }
+  public static var GreenPigment16: UIKit.UIColor {
+    get
+  }
+  public static var ImperialRed100: UIKit.UIColor {
+    get
+  }
+  public static var ImperialRed66: UIKit.UIColor {
+    get
+  }
+  public static var ImperialRed33: UIKit.UIColor {
+    get
+  }
+  public static var ImperialRed16: UIKit.UIColor {
+    get
+  }
+  public static var Yellow100: UIKit.UIColor {
+    get
+  }
+  public static var Yellow66: UIKit.UIColor {
+    get
+  }
+  public static var Yellow33: UIKit.UIColor {
+    get
+  }
+  public static var Yellow16: UIKit.UIColor {
+    get
+  }
+  public static var PacificBlue100: UIKit.UIColor {
+    get
+  }
+  public static var PacificBlue66: UIKit.UIColor {
+    get
+  }
+  public static var PacificBlue33: UIKit.UIColor {
+    get
+  }
+  public static var PacificBlue16: UIKit.UIColor {
+    get
+  }
+  public static var OceanBlue100: UIKit.UIColor {
+    get
+  }
+  public static var OceanBlue66: UIKit.UIColor {
+    get
+  }
+  public static var OceanBlue33: UIKit.UIColor {
+    get
+  }
+  public static var OceanBlue16: UIKit.UIColor {
+    get
+  }
+  public static var DavysGrey100: UIKit.UIColor {
+    get
+  }
+  public static var DavysGrey66: UIKit.UIColor {
+    get
+  }
+  public static var DavysGrey33: UIKit.UIColor {
+    get
+  }
+  public static var DavysGrey16: UIKit.UIColor {
+    get
+  }
+  public static var PrincetonOrange100: UIKit.UIColor {
+    get
+  }
+  public static var PrincetonOrange66: UIKit.UIColor {
+    get
+  }
+  public static var PrincetonOrange33: UIKit.UIColor {
+    get
+  }
+  public static var PrincetonOrange16: UIKit.UIColor {
+    get
+  }
+}
+extension UIKit.UIColor {
+  convenience public init(hex: Swift.Int, alpha: CoreFoundation.CGFloat = 1.0)
+  convenience public init(hex string: Swift.String, alpha: CoreFoundation.CGFloat = 1.0)
+  public var hexValue: Swift.String {
+    get
+  }
+}
+@objc public protocol TagListViewDelegate {
+  @objc optional func tagPressed(_ title: Swift.String, tagView: PCIWidget.TagView, sender: PCIWidget.TagListView)
+  @objc optional func tagRemoveButtonPressed(_ title: Swift.String, tagView: PCIWidget.TagView, sender: PCIWidget.TagListView)
+  @objc func viewHeight(_ height: CoreFoundation.CGFloat)
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class TagListView : UIKit.UIView {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var textColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var selectedTextColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var tagLineBreakMode: UIKit.NSLineBreakMode {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var tagBackgroundColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var tagHighlightedBackgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var tagSelectedBackgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var cornerRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var borderWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var borderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var selectedBorderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var paddingY: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var paddingX: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var marginY: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var marginX: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc public enum Alignment : Swift.Int {
+    case left
+    case center
+    case right
+    case leading
+    case trailing
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var alignment: PCIWidget.TagListView.Alignment {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var shadowColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var shadowRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var shadowOffset: CoreFoundation.CGSize {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var shadowOpacity: Swift.Float {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var enableRemoveButton: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var removeButtonIconSize: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var removeIconLineWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var removeIconLineColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var textFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var delegate: (any PCIWidget.TagListViewDelegate)?
+  @_Concurrency.MainActor(unsafe) open var tagViews: [PCIWidget.TagView] {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepareForInterfaceBuilder()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) open func addTag(_ title: Swift.String) -> PCIWidget.TagView
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) open func addTags(_ titles: [Swift.String]) -> [PCIWidget.TagView]
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) open func addTagView(_ tagView: PCIWidget.TagView) -> PCIWidget.TagView
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) open func addTagViews(_ tagViewList: [PCIWidget.TagView]) -> [PCIWidget.TagView]
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) open func insertTag(_ title: Swift.String, at index: Swift.Int) -> PCIWidget.TagView
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) open func insertTagView(_ tagView: PCIWidget.TagView, at index: Swift.Int) -> PCIWidget.TagView
+  @_Concurrency.MainActor(unsafe) open func setTitle(_ title: Swift.String, at index: Swift.Int)
+  @_Concurrency.MainActor(unsafe) open func removeTag(_ title: Swift.String)
+  @_Concurrency.MainActor(unsafe) open func removeTagView(_ tagView: PCIWidget.TagView)
+  @_Concurrency.MainActor(unsafe) open func removeAllTags()
+  @_Concurrency.MainActor(unsafe) open func selectedTags() -> [PCIWidget.TagView]
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol M2PBottomPopupDelegate : AnyObject {
+  func M2PBottomPopupViewLoaded()
+  func M2PBottomPopupWillAppear()
+  func M2PBottomPopupDidAppear()
+  func M2PBottomPopupWillDismiss()
+  func M2PBottomPopupDidDismiss()
+  func M2PBottomPopupDismissInteractionPercentChanged(from oldValue: CoreFoundation.CGFloat, to newValue: CoreFoundation.CGFloat)
+}
+extension PCIWidget.M2PBottomPopupDelegate {
+  public func M2PBottomPopupViewLoaded()
+  public func M2PBottomPopupWillAppear()
+  public func M2PBottomPopupDidAppear()
+  public func M2PBottomPopupWillDismiss()
+  public func M2PBottomPopupDidDismiss()
+  public func M2PBottomPopupDismissInteractionPercentChanged(from oldValue: CoreFoundation.CGFloat, to newValue: CoreFoundation.CGFloat)
+}
+public protocol M2PBottomPopupAttributesDelegate : AnyObject {
+  var M2PPopupHeight: CoreFoundation.CGFloat { get }
+  var M2PPopupTopCornerRadius: CoreFoundation.CGFloat { get }
+  var M2PPopupPresentDuration: Swift.Double { get }
+  var M2PPopupDismissDuration: Swift.Double { get }
+  var M2PPopupShouldDismissInteractivelty: Swift.Bool { get }
+  var M2PPopupDimmingViewAlpha: CoreFoundation.CGFloat { get }
+  var M2PPopupShouldBeganDismiss: Swift.Bool { get }
+  var M2PPopupViewAccessibilityIdentifier: Swift.String { get }
+}
+public struct M2PBottomPopupConstants {
+  public static let kDefaultHeight: CoreFoundation.CGFloat
+  public static let kDefaultHeightMax: CoreFoundation.CGFloat
+  public static let kDefaultTopCornerRadius: CoreFoundation.CGFloat
+  public static let kDefaultPresentDuration: Swift.Double
+  public static let kDefaultDismissDuration: Swift.Double
+  public static let dismissInteractively: Swift.Bool
+  public static let shouldBeganDismiss: Swift.Bool
+  public static let kDimmingViewDefaultAlphaValue: CoreFoundation.CGFloat
+  public static let defaultPopupViewAccessibilityIdentifier: Swift.String
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class M2PBottomSheetViewController : UIKit.UIViewController, PCIWidget.M2PBottomPopupAttributesDelegate {
+  @_Concurrency.MainActor(unsafe) weak open var popupDelegate: (any PCIWidget.M2PBottomPopupDelegate)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) open var M2PPopupHeight: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var M2PPopupTopCornerRadius: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var M2PPopupPresentDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var M2PPopupDismissDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var M2PPopupShouldDismissInteractivelty: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var M2PPopupDimmingViewAlpha: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var M2PPopupShouldBeganDismiss: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var M2PPopupViewAccessibilityIdentifier: Swift.String {
+    get
+  }
+  @objc deinit
+}
+extension PCIWidget.M2PBottomSheetViewController {
+  @_Concurrency.MainActor(unsafe) open func updatePopupHeight(to height: CoreFoundation.CGFloat)
+}
+extension PCIWidget.M2PSDKEnvironment : Swift.Equatable {}
+extension PCIWidget.M2PSDKEnvironment : Swift.Hashable {}
+extension PCIWidget.M2PFlowType : Swift.Equatable {}
+extension PCIWidget.M2PFlowType : Swift.Hashable {}
+extension PCIWidget.ButtonTypes : Swift.Equatable {}
+extension PCIWidget.ButtonTypes : Swift.Hashable {}
+extension PCIWidget.ButtonStyle : Swift.Equatable {}
+extension PCIWidget.ButtonStyle : Swift.Hashable {}
+extension PCIWidget.ButtonStyle : Swift.RawRepresentable {}
+extension PCIWidget.ButtonStatus : Swift.Equatable {}
+extension PCIWidget.ButtonStatus : Swift.Hashable {}
+extension PCIWidget.ComponentFontSize : Swift.Equatable {}
+extension PCIWidget.ComponentFontSize : Swift.Hashable {}
+extension PCIWidget.ComponentFontSize : Swift.RawRepresentable {}
+extension PCIWidget.Colour : Swift.Equatable {}
+extension PCIWidget.Colour : Swift.Hashable {}
+extension PCIWidget.Colour : Swift.RawRepresentable {}
+extension PCIWidget.M2PInputFieldType : Swift.Equatable {}
+extension PCIWidget.M2PInputFieldType : Swift.Hashable {}
+extension PCIWidget.M2PInputFieldStyle : Swift.Equatable {}
+extension PCIWidget.M2PInputFieldStyle : Swift.Hashable {}
+extension PCIWidget.DisplayType : Swift.Equatable {}
+extension PCIWidget.DisplayType : Swift.Hashable {}
+extension PCIWidget.DisplayType : Swift.RawRepresentable {}
+extension PCIWidget.KeyboardType : Swift.Equatable {}
+extension PCIWidget.KeyboardType : Swift.Hashable {}
+extension PCIWidget.KeyboardType : Swift.RawRepresentable {}
+extension PCIWidget.M2PGradientView.Mode : Swift.Equatable {}
+extension PCIWidget.M2PGradientView.Mode : Swift.Hashable {}
+extension PCIWidget.M2PGradientView.Mode : Swift.RawRepresentable {}
+extension PCIWidget.M2PGradientView.Direction : Swift.Equatable {}
+extension PCIWidget.M2PGradientView.Direction : Swift.Hashable {}
+extension PCIWidget.M2PGradientView.Direction : Swift.RawRepresentable {}
+extension PCIWidget.TagListView.Alignment : Swift.Equatable {}
+extension PCIWidget.TagListView.Alignment : Swift.Hashable {}
+extension PCIWidget.TagListView.Alignment : Swift.RawRepresentable {}

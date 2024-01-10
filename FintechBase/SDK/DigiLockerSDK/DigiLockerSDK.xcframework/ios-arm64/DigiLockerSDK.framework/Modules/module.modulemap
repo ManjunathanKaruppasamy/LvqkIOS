@@ -1,0 +1,11 @@
+framework module DigiLockerSDK {
+  umbrella header "DigiLockerSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module DigiLockerSDK.Swift {
+  header "DigiLockerSDK-Swift.h"
+  requires objc
+}

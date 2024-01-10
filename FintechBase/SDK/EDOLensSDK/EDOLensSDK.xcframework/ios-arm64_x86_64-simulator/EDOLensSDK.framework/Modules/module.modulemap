@@ -1,0 +1,11 @@
+framework module EDOLensSDK {
+  umbrella header "EDOLensSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module EDOLensSDK.Swift {
+  header "EDOLensSDK-Swift.h"
+  requires objc
+}

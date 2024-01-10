@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="InstructionContentTableViewCell" customModule="FintechBase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAc-FP-qRW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_tick" translatesAutoresizingMaskIntoConstraints="NO" id="IA5-Ui-w8T">
+                                <rect key="frame" x="16" y="0.0" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="uv5-Rf-pCv"/>
+                                    <constraint firstAttribute="width" constant="16" id="zoh-Lh-GxS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="dfaerfgergdfaerfgergdfaerfgergdfaerfgergdfaerfgergdfaerfgergdfaerfgergdfaerfgergdfaerfgerg" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYf-Nx-Ott">
+                                <rect key="frame" x="40" y="0.0" width="264" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IA5-Ui-w8T" firstAttribute="top" secondItem="BAc-FP-qRW" secondAttribute="top" id="N9T-ie-H05"/>
+                            <constraint firstAttribute="trailing" secondItem="eYf-Nx-Ott" secondAttribute="trailing" constant="16" id="OFq-8W-c6u"/>
+                            <constraint firstItem="IA5-Ui-w8T" firstAttribute="leading" secondItem="BAc-FP-qRW" secondAttribute="leading" constant="16" id="QlV-to-fVl"/>
+                            <constraint firstItem="eYf-Nx-Ott" firstAttribute="leading" secondItem="IA5-Ui-w8T" secondAttribute="trailing" constant="8" id="TnY-6c-g1r"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eYf-Nx-Ott" secondAttribute="bottom" constant="12" id="dcP-cQ-4Fy"/>
+                            <constraint firstItem="eYf-Nx-Ott" firstAttribute="top" secondItem="BAc-FP-qRW" secondAttribute="top" id="o3r-ox-eG1"/>
+                            <constraint firstItem="eYf-Nx-Ott" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BAc-FP-qRW" secondAttribute="leading" constant="16" id="qQ9-d2-KEm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="BAc-FP-qRW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7YC-jP-rhu"/>
+                    <constraint firstItem="BAc-FP-qRW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CLx-dY-4rx"/>
+                    <constraint firstAttribute="bottom" secondItem="BAc-FP-qRW" secondAttribute="bottom" id="DWU-dd-6Zw"/>
+                    <constraint firstAttribute="trailing" secondItem="BAc-FP-qRW" secondAttribute="trailing" id="RNG-eR-Yv3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="contentLabel" destination="eYf-Nx-Ott" id="qVt-sL-2ct"/>
+                <outlet property="tickImage" destination="IA5-Ui-w8T" id="zMd-Qy-XY4"/>
+            </connections>
+            <point key="canvasLocation" x="-76.33587786259541" y="-12.67605633802817"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle_tick" width="16" height="16"/>
+    </resources>
+</document>

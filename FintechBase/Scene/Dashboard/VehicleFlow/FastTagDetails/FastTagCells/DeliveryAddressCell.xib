@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="168" id="KGk-i7-Jjw" customClass="DeliveryAddressCell" customModule="FintechBase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8t-pw-r73">
+                        <rect key="frame" x="16" y="16" width="288" height="136"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mi-YR-GGt">
+                                <rect key="frame" x="16.000000000000007" y="16" width="115.66666666666669" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBT-CN-6Dw">
+                                <rect key="frame" x="197.66666666666666" y="16" width="74.333333333333343" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="w33-Y7-nIg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bW-1A-bOT">
+                                <rect key="frame" x="16" y="52" width="256" height="1"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="cGx-SG-ls8"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hl-8g-JYV">
+                                <rect key="frame" x="16" y="65" width="256" height="54"/>
+                                <string key="text">No.122, Sasthri street, Baskar Nagar, Perungalathur, Chennai - 600123,
+Tamil Nadu, India</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6Hl-8g-JYV" secondAttribute="bottom" constant="17" id="1u0-WB-phC"/>
+                            <constraint firstItem="6bW-1A-bOT" firstAttribute="top" secondItem="nBT-CN-6Dw" secondAttribute="bottom" constant="16" id="4fC-5h-nOU"/>
+                            <constraint firstItem="9Mi-YR-GGt" firstAttribute="top" secondItem="A8t-pw-r73" secondAttribute="top" constant="16" id="6j3-F3-zGn"/>
+                            <constraint firstItem="6Hl-8g-JYV" firstAttribute="trailing" secondItem="6bW-1A-bOT" secondAttribute="trailing" id="8Pn-zM-Lur"/>
+                            <constraint firstItem="nBT-CN-6Dw" firstAttribute="width" secondItem="A8t-pw-r73" secondAttribute="width" multiplier="0.258" id="DJY-rL-Gaj"/>
+                            <constraint firstItem="6bW-1A-bOT" firstAttribute="trailing" secondItem="nBT-CN-6Dw" secondAttribute="trailing" id="FYo-Cp-MhP"/>
+                            <constraint firstItem="nBT-CN-6Dw" firstAttribute="top" secondItem="A8t-pw-r73" secondAttribute="top" constant="16" id="GUU-1T-xSs"/>
+                            <constraint firstItem="6bW-1A-bOT" firstAttribute="leading" secondItem="9Mi-YR-GGt" secondAttribute="leading" id="GfS-nr-jAm"/>
+                            <constraint firstAttribute="trailing" secondItem="nBT-CN-6Dw" secondAttribute="trailing" constant="16" id="YaK-j6-qjW"/>
+                            <constraint firstItem="6Hl-8g-JYV" firstAttribute="leading" secondItem="6bW-1A-bOT" secondAttribute="leading" id="ZeA-VY-h6E"/>
+                            <constraint firstItem="9Mi-YR-GGt" firstAttribute="leading" secondItem="A8t-pw-r73" secondAttribute="leading" constant="16" id="g9g-hi-gkz"/>
+                            <constraint firstItem="6Hl-8g-JYV" firstAttribute="top" secondItem="6bW-1A-bOT" secondAttribute="bottom" constant="12" id="s9V-05-e69"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="A8t-pw-r73" secondAttribute="trailing" constant="16" id="8CB-4L-EUz"/>
+                    <constraint firstItem="A8t-pw-r73" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="XE7-zQ-KCs"/>
+                    <constraint firstAttribute="bottom" secondItem="A8t-pw-r73" secondAttribute="bottom" constant="16" id="iHH-A2-1aI"/>
+                    <constraint firstItem="A8t-pw-r73" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="z2o-0z-zrX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="addressValueLabel" destination="6Hl-8g-JYV" id="TLj-MY-Q5B"/>
+                <outlet property="changeButton" destination="nBT-CN-6Dw" id="amq-Zj-CHt"/>
+                <outlet property="customView" destination="A8t-pw-r73" id="Ba2-b1-2Qa"/>
+                <outlet property="titleLabel" destination="9Mi-YR-GGt" id="fa0-B2-pxx"/>
+            </connections>
+            <point key="canvasLocation" x="-82.44274809160305" y="42.253521126760567"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

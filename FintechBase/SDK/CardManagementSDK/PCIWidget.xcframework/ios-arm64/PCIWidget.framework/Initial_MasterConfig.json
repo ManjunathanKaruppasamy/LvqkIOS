@@ -1,0 +1,945 @@
+{
+  "currency": "₹",
+  "country": "IN",
+  "error_color": "#DB092F",
+  "registrationConfig": {
+    "title": "Registration",
+    "items": [
+      {
+        "seq_no": 1,
+        "header": "Basic Details",
+        "param_type": "single",
+        "api_parameter": "",
+        "isHeaderVisible": true,
+        "list": [
+          {
+            "seq_no": 1,
+            "field_label": "Title",
+            "api_parameter": "title",
+            "field_type": "list",
+            "design_type": "bottomline",
+            "isEnabled": true,
+            "required_item": "Y",
+            "reg_ex": null,
+            "lov": [
+              {
+                "key": "Mr",
+                "value": "Mr"
+              },
+              {
+                "key": "Miss",
+                "value": "Miss"
+              },
+              {
+                "key": "Mrs",
+                "value": "Mrs"
+              }
+            ],
+            "max_length": 5,
+            "keyboard_type": "default"
+          },
+          {
+            "seq_no": 2,
+            "field_label": "First Name",
+            "api_parameter": "firstName",
+            "field_type": "text",
+            "design_type": "bottomline",
+            "required_item": "Y",
+            "isEnabled": true,
+            "reg_ex": "^[A-Za-z]((\\s)?([A-Za-z ]))*$",
+            "field_error": "First Name should not be empty",
+            "lov": [],
+            "max_length": 40,
+            "keyboard_type": "default"
+          },
+          {
+            "seq_no": 3,
+            "field_label": "Last Name",
+            "api_parameter": "lastName",
+            "field_type": "text",
+            "design_type": "bottomline",
+            "required_item": "Y",
+            "isEnabled": true,
+            "reg_ex": "^[A-Za-z]((\\s)?([A-Za-z ]))*$",
+            "field_error": "Last Name should not be empty",
+            "lov": [],
+            "max_length": 40,
+            "keyboard_type": "default"
+          },
+          {
+            "seq_no": 4,
+            "field_label": "Gender",
+            "api_parameter": "gender",
+            "field_type": "list",
+            "design_type": "bottomline",
+            "isEnabled": true,
+            "required_item": "Y",
+            "reg_ex": null,
+            "lov": [
+              {
+                "key": "Male",
+                "value": "Male"
+              },
+              {
+                "key": "Female",
+                "value": "Female"
+              },
+              {
+                "key": "Others",
+                "value": "Others"
+              }
+            ],
+            "max_length": 40,
+            "keyboard_type": "default"
+          },
+          {
+            "seq_no": 5,
+            "field_label": "Date of birth",
+            "api_parameter": "dateInfo",
+            "field_type": "date_picker",
+            "design_type": "bottomline",
+            "date_format": "yyyy-MM-dd",
+            "isEnabled": true,
+            "required_item": "Y",
+            "reg_ex": null,
+            "lov": [],
+            "max_length": 40,
+            "keyboard_type": "default"
+          },
+          {
+            "seq_no": 6,
+            "field_label": "Occupation",
+            "api_parameter": "occupation",
+            "design_type": "bottomline",
+            "field_type": "list",
+            "required_item": "Y",
+            "isEnabled": true,
+            "reg_ex": null,
+            "lov": [
+              {
+                "key": "Salaried",
+                "value": "Salaried"
+              },
+              {
+                "key": "Business",
+                "value": "Business"
+              },
+              {
+                "key": "Agriculture",
+                "value": "Agriculture"
+              },
+              {
+                "key": "Others",
+                "value": "Others"
+              }
+            ],
+            "max_length": 40,
+            "keyboard_type": "default"
+          },
+          {
+            "seq_no": 7,
+            "field_label": "Employer Name",
+            "api_parameter": "employerName",
+            "design_type": "bottomline",
+            "field_type": "text",
+            "required_item": "Y",
+            "isEnabled": true,
+            "field_error": "Employer Name should not be empty",
+            "reg_ex": "[A-Za-z0-9 ]*",
+            "lov": [],
+            "max_length": 40,
+            "keyboard_type": "default"
+          },
+          {
+            "seq_no": 9,
+            "field_label": "Nationality",
+            "api_parameter": "nationality",
+            "design_type": "bottomline",
+            "field_type": "text",
+            "required_item": "Y",
+            "reg_ex": "[A-Za-z]*",
+            "field_error": "Nationality should not be empty",
+            "lov": [],
+            "max_length": 40,
+            "isEnabled": true,
+            "keyboard_type": "default"
+          },
+          {
+            "seq_no": 8,
+            "field_label": "Country of Birth",
+            "api_parameter": "countryOfBirth",
+            "design_type": "bottomline",
+            "field_type": "country_picker",
+            "required_item": "Y",
+            "reg_ex": null,
+            "lov": [],
+            "max_length": 40,
+            "isEnabled": true,
+            "keyboard_type": "default"
+          }
+        ]
+      },
+      {
+        "seq_no": 2,
+        "header": "Communication Address",
+        "param_type": "group",
+        "api_parameter": "addressInfo",
+        "isHeaderVisible": true,
+        "list": [
+          {
+            "seq_no": 1,
+            "field_label": "Address line 1",
+            "api_parameter": "address1",
+            "design_type": "bottomline",
+            "field_type": "text",
+            "required_item": "Y",
+            "reg_ex": null,
+            "field_error": "Address line 1 should not be empty",
+            "lov": [],
+            "max_length": 100,
+            "isEnabled": true,
+            "keyboard_type": "default"
+          },
+          {
+            "seq_no": 2,
+            "field_label": "Address line 2",
+            "api_parameter": "address2",
+            "design_type": "bottomline",
+            "field_type": "text",
+            "required_item": "Y",
+            "field_error": "Address line 2 should not be empty",
+            "reg_ex": null,
+            "lov": [],
+            "max_length": 100,
+            "isEnabled": true,
+            "keyboard_type": "default"
+          },
+          {
+            "seq_no": 3,
+            "field_label": "City",
+            "api_parameter": "city",
+            "field_type": "text",
+            "design_type": "bottomline",
+            "required_item": "Y",
+            "field_error": "City should not be empty",
+            "reg_ex": "[A-Za-z]*",
+            "lov": [],
+            "max_length": 40,
+            "isEnabled": true,
+            "keyboard_type": "default"
+          },
+          {
+            "seq_no": 4,
+            "field_label": "Country",
+            "api_parameter": "country",
+            "design_type": "bottomline",
+            "field_type": "country_picker",
+            "required_item": "Y",
+            "reg_ex": null,
+            "lov": [],
+            "max_length": 40,
+            "isEnabled": true,
+            "keyboard_type": "default"
+          },
+          {
+            "seq_no": 5,
+            "field_label": "Pincode",
+            "api_parameter": "pincode",
+            "design_type": "bottomline",
+            "field_type": "text",
+            "required_item": "Y",
+            "reg_ex": "^[1-9][0-9]*$",
+            "field_error": "Pincode should not be empty",
+            "lov": [],
+            "max_length": 10,
+            "isEnabled": true,
+            "keyboard_type": "number"
+          }
+        ]
+      },
+      {
+        "seq_no": 3,
+        "header": "Permanent Address",
+        "param_type": "group",
+        "api_parameter": "addressInfo",
+        "isHeaderVisible": true,
+        "list": [
+          {
+            "seq_no": 0,
+            "field_label": "Permanent address same as communication address?",
+            "description": "Permanent address same as communication address?",
+            "api_parameter": "is_permanent",
+            "field_type": "toggle",
+            "toggle_state": false,
+            "required_item": "Y",
+            "reg_ex": null,
+            "lov": [],
+            "max_length": 10,
+            "isEnabled": true,
+            "keyboard_type": "number",
+            "subList": {
+              "isTrue": [],
+              "isFalse": [
+                {
+                  "seq_no": 1,
+                  "field_label": "Address line 1",
+                  "api_parameter": "address1",
+                  "design_type": "bottomline",
+                  "field_type": "text",
+                  "required_item": "Y",
+                  "field_error": "Address line 1 should not be empty",
+                  "reg_ex": null,
+                  "lov": [],
+                  "max_length": 100,
+                  "isEnabled": true,
+                  "keyboard_type": "default"
+                },
+                {
+                  "seq_no": 2,
+                  "field_label": "Address line 2",
+                  "api_parameter": "address2",
+                  "design_type": "bottomline",
+                  "field_error": "Address line 2 should not be empty",
+                  "field_type": "text",
+                  "required_item": "Y",
+                  "reg_ex": null,
+                  "lov": [],
+                  "max_length": 100,
+                  "isEnabled": true,
+                  "keyboard_type": "default"
+                },
+                {
+                  "seq_no": 3,
+                  "field_label": "City",
+                  "api_parameter": "city",
+                  "design_type": "bottomline",
+                  "field_error": "City should not be empty",
+                  "field_type": "text",
+                  "required_item": "Y",
+                  "reg_ex": "[A-Za-z]*",
+                  "lov": [],
+                  "max_length": 40,
+                  "isEnabled": true,
+                  "keyboard_type": "default"
+                },
+                {
+                  "seq_no": 4,
+                  "field_label": "Country",
+                  "api_parameter": "country",
+                  "design_type": "bottomline",
+                  "field_type": "country_picker",
+                  "required_item": "Y",
+                  "reg_ex": null,
+                  "lov": [],
+                  "max_length": 40,
+                  "isEnabled": true,
+                  "keyboard_type": "default"
+                },
+                {
+                  "seq_no": 5,
+                  "field_label": "Pincode",
+                  "api_parameter": "pincode",
+                  "design_type": "bottomline",
+                  "field_type": "text",
+                  "required_item": "Y",
+                  "field_error": "Pincode should not be empty",
+                  "reg_ex": "^[1-9][0-9]*$",
+                  "lov": [],
+                  "max_length": 10,
+                  "isEnabled": true,
+                  "keyboard_type": "number"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "seq_no": 4,
+        "header": "Contact Information",
+        "param_type": "group",
+        "api_parameter": "communicationInfo",
+        "isHeaderVisible": true,
+        "list": [
+          {
+            "seq_no": 1,
+            "field_label": "Dial Code",
+            "api_parameter": "countryCode",
+            "design_type": "bottomline",
+            "field_type": "country_picker",
+            "required_item": "Y",
+            "reg_ex": "",
+            "field_error": "",
+            "lov": [],
+            "max_length": 0,
+            "min_length": 0,
+            "isEnabled": true,
+            "keyboard_type": ""
+          },
+          {
+            "seq_no": 2,
+            "field_label": "Contact No",
+            "api_parameter": "contactNo",
+            "design_type": "bottomline",
+            "field_type": "text",
+            "required_item": "Y",
+            "reg_ex": "^[1-9][0-9]*$",
+            "field_error": "Contact No. should not be empty",
+            "lov": [],
+            "max_length": 15,
+            "min_length": 9,
+            "isEnabled": true,
+            "keyboard_type": "number"
+          },
+          {
+            "seq_no": 3,
+            "field_label": "Telephone No",
+            "api_parameter": "telephoneNumber",
+            "design_type": "bottomline",
+            "field_type": "text",
+            "field_error": "Telephone no. should not be empty",
+            "required_item": "N",
+            "reg_ex": "[0-9]*",
+            "lov": [],
+            "max_length": 15,
+            "isEnabled": true,
+            "keyboard_type": "number"
+          }
+        ]
+      },
+      {
+        "seq_no": 5,
+        "header": "KYC Info",
+        "param_type": "group",
+        "api_parameter": "kycInfo",
+        "isHeaderVisible": true,
+        "list": [
+          {
+            "seq_no": 1,
+            "field_label": "Document No",
+            "api_parameter": "documentNo",
+            "design_type": "bottomline",
+            "field_type": "text",
+            "required_item": "Y",
+            "reg_ex": "[A-Za-z0-9]*",
+            "field_error": "Document No. should not be empty",
+            "lov": [],
+            "max_length": 20,
+            "isEnabled": true,
+            "keyboard_type": "default"
+          }
+        ]
+      },
+      {
+        "seq_no": 6,
+        "header": "Other Details",
+        "param_type": "single",
+        "api_parameter": "",
+        "isHeaderVisible": true,
+        "list": [
+          {
+            "seq_no": 1,
+            "field_label": "Is Arab Bank Customer?",
+            "api_parameter": "isArabBankCustomer",
+            "description": "Arab Bank Customer",
+            "field_type": "toggle",
+            "toggle_state": false,
+            "isEnabled": true,
+            "required_item": "Y",
+            "reg_ex": null,
+            "lov": [],
+            "max_length": 0,
+            "keyboard_type": "default",
+            "subList": {
+              "isTrue": [
+                {
+                  "seq_no": 1,
+                  "field_label": "Account No",
+                  "api_parameter": "accountNo",
+                  "design_type": "bottomline",
+                  "field_type": "text",
+                  "required_item": "Y",
+                  "field_error": "Account No. should not be empty",
+                  "reg_ex": "^[1-9][0-9]*$",
+                  "lov": [],
+                  "max_length": 30,
+                  "isEnabled": true,
+                  "keyboard_type": "number"
+                }
+              ],
+              "isFalse": []
+            }
+          },
+          {
+            "seq_no": 3,
+            "field_label": "Personalised Card",
+            "description": "Personalised Card",
+            "api_parameter": "isPersonalizedCard",
+            "field_type": "toggle",
+            "toggle_state": false,
+            "required_item": "Y",
+            "reg_ex": null,
+            "lov": [],
+            "max_length": 40,
+            "isEnabled": true,
+            "keyboard_type": "default",
+            "subList": null
+          },
+          {
+            "seq_no": 4,
+            "field_label": "Is US Citizen?",
+            "description": "is US Citizen",
+            "api_parameter": "isUSCitizen",
+            "field_type": "toggle",
+            "toggle_state": false,
+            "required_item": "Y",
+            "reg_ex": null,
+            "lov": [],
+            "max_length": 40,
+            "isEnabled": true,
+            "keyboard_type": "default",
+            "subList": {
+              "isTrue": [
+                {
+                  "seq_no": 1,
+                  "field_label": "Are you a Green Card Holder?",
+                  "description": "Are you a Green Card Holder?",
+                  "api_parameter": "isGreenCardHolder",
+                  "design_type": "bottomline",
+                  "field_type": "list",
+                  "toggle_state": false,
+                  "required_item": "Y",
+                  "reg_ex": null,
+                  "lov": [
+                    {
+                      "key": "Yes",
+                      "value": "Yes"
+                    },
+                    {
+                      "key": "No",
+                      "value": "No"
+                    }
+                  ],
+                  "max_length": 10,
+                  "keyboard_type": "default"
+                }
+              ],
+              "isFalse": []
+            }
+          }
+        ]
+      }
+    ],
+    "terms": {
+      "text": "Please accept Terms & Condition and also Privacy Notice",
+      "hyperText": [
+        {
+          "text": "Terms & Condition",
+          "url": "",
+          "content": "<html><body><h3>Terms & Condition</h3><hr><p>All Lorem Ipsum purchases are managed by the individual App Stores (Apple, Google Windows) and Lorem Ipsum will never store your credit card information or make it available to any third parties. Any purchasing information provided will be provided directly from you to the respective App Store and you will be subject to their credit card policies.</p><hr><p>Your access to and use of Lorem Ipsum (the app) is subject exclusively to these Terms and Conditions. You will not use the app for any purpose that is unlawful or prohibited by these Terms and Conditions. By using the app you are fully accepting the terms, conditions and disclaimers contained in this notice. If you do not accept these Terms and Conditions you must immediately stop using the app.</p><hr></body></html>"
+        },
+        {
+          "text": "Privacy Notice",
+          "url": "https://www.visa.co.in",
+          "content": ""
+        }
+      ]
+    }
+  },
+  "cardManagementConfig": {
+    "card": {
+      "isVisible": true,
+      "details": {
+        "name": {
+          "title": null
+        },
+        "cardNumber": {
+          "title": null,
+          "isMasked": false,
+          "isCopyEnabled": true
+        },
+        "cvv": {
+          "title": "CVV",
+          "isMasked": true,
+          "authentication": [
+            {
+              "authType": "Biometric",
+              "error_message": ""
+            }
+          ]
+        },
+        "expiry": {
+          "title": "Expiry",
+          "isMasked": false
+        }
+      }
+    },
+    "preferences": [
+      {
+        "seq_no": 1,
+        "header": "Transaction Limit",
+        "sub_header": "Set / Modify Limit",
+        "description": "Manage limits to control spending for different types of transactions.",
+        "header_key": "limit",
+        "sectionList": [
+          {
+            "seq_no": 3,
+            "header": "ATM Withdrawal",
+            "description": "",
+            "section_key": "ATM",
+            "isEditable": true,
+            "field":
+            {
+              "seq_no": 1,
+              "field_label": "Max. Per transaction limit",
+              "api_parameter": "limit",
+              "design_type": "bottomline",
+              "field_type": "text",
+              "field_error": "",
+              "required_item": "Y",
+              "reg_ex": null,
+              "lov": [],
+              "max_length": null,
+              "min_value": 1,
+              "max_value": 200000,
+              "isEnabled": true,
+              "keyboard_type": "number"
+            },
+            "list": [
+              {
+                "seq_no": 1,
+                "field_name": "2500",
+                "field_type": "button",
+                "design_type": "secondary"
+              },
+              {
+                "field_name": "5000",
+                "field_type": "button",
+                "seq_no": 2,
+                "design_type": "secondary"
+              },
+              {
+                "field_name": "10000",
+                "field_type": "button",
+                "seq_no": 3,
+                "design_type": "secondary"
+              },
+              {
+                "field_name": "20000",
+                "field_type": "button",
+                "seq_no": 4,
+                "design_type": "secondary"
+              }
+            ]
+          },
+          {
+            "seq_no": 1,
+            "header": "Merchant outlet",
+            "description": "Offline and POS Transactions",
+            "section_key": "POS",
+            "isEditable": true,
+            "field":
+            {
+              "seq_no": 1,
+              "field_label": "Max. Per transaction limit",
+              "api_parameter": "limit",
+              "design_type": "bottomline",
+              "field_type": "text",
+              "field_error": "",
+              "required_item": "Y",
+              "reg_ex": null,
+              "lov": [],
+              "max_length": null,
+              "min_value": 1,
+              "max_value": 200000,
+              "isEnabled": true,
+              "keyboard_type": "number"
+            },
+            "list": [
+              {
+                "seq_no": 1,
+                "field_name": "2500",
+                "field_type": "button",
+                "design_type": "secondary"
+              },
+              {
+                "field_name": "5000",
+                "field_type": "button",
+                "seq_no": 2,
+                "design_type": "secondary"
+              },
+              {
+                "field_name": "10000",
+                "field_type": "button",
+                "seq_no": 3,
+                "design_type": "secondary"
+              },
+              {
+                "field_name": "20000",
+                "field_type": "button",
+                "seq_no": 4,
+                "design_type": "secondary"
+              }
+            ]
+          },
+          {
+            "seq_no": 2,
+            "header": "Online shopping",
+            "description": "E-commerce Websites and Apps",
+            "section_key": "ECOM",
+            "isEditable": true,
+            "field": {
+              "seq_no": 3,
+              "field_label": "Max. Per transaction limit",
+              "api_parameter": "limit",
+              "design_type": "bottomline",
+              "field_type": "text",
+              "field_error": "",
+              "required_item": "Y",
+              "reg_ex": null,
+              "lov": [],
+              "max_length": null,
+              "min_value": 1,
+              "max_value": 200000,
+              "isEnabled": true,
+              "keyboard_type": "number"
+            },
+            "list": [
+              {
+                "seq_no": 1,
+                "field_name": "2500",
+                "field_type": "button",
+                "design_type": "secondary"
+              },
+              {
+                "field_name": "5000",
+                "field_type": "button",
+                "seq_no": 2,
+                "design_type": "secondary"
+              },
+              {
+                "field_name": "10000",
+                "field_type": "button",
+                "seq_no": 3,
+                "design_type": "secondary"
+              },
+              {
+                "field_name": "20000",
+                "field_type": "button",
+                "seq_no": 4,
+                "design_type": "secondary"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "seq_no": 2,
+        "header": "Control Card",
+        "header_key": "manage_card",
+        "sectionList": [
+          {
+            "seq_no": 1,
+            "header": "Set PIN",
+            "description": "Change or reset your card PIN",
+            "section_key": "set_pin",
+            "list": [
+              {
+                "seq_no": 1,
+                "field_name": "Date of Birth",
+                "place_holder": "DD/MM/YYYY",
+                "field_type": "date_picker",
+                "date_format": "dd/MM/yyyy",
+                "design_type": "bottomline",
+                "item_key": "dob",
+                "api_parameter": "dob",
+                "required_item": "Y",
+                "field_error": "DOB should not be empty"
+              },
+              {
+                "seq_no": 2,
+                "field_name": "Enter PIN",
+                "place_holder": "Enter 4 digit PIN",
+                "field_type": "dashed",
+                "design_type": "border",
+                "item_key": "pin",
+                "api_parameter": "pin",
+                "field_error": "Pin should not be empty",
+                "reg_ex": "[0-9]*",
+                "required_item": "Y",
+                "min_length": 4,
+                "max_length": 4,
+                "keyboard_type": "number"
+              },
+              {
+                "seq_no": 3,
+                "field_name": "Re-enter PIN",
+                "place_holder": "Confirm 4 digit PIN",
+                "field_type": "dashed",
+                "design_type": "border",
+                "field_error": "Confirm Pin should not be empty",
+                "item_key": "confirm_pin",
+                "required_item": "Y",
+                "reg_ex": "[0-9]*",
+                "min_length": 4,
+                "max_length": 4,
+                "keyboard_type": "number"
+              },
+              {
+                "seq_no": 4,
+                "field_name": "Continue",
+                "field_type": "button",
+                "item_key": "set_pin",
+                "design_type": "primary",
+                "isEnabled": false,
+                "authentication": [
+                  {
+                    "authType": "OTP",
+                    "error_message": "OTP failed, Please try again later"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "seq_no": 2,
+            "header": "Block/Temporary Block",
+            "description": "Block Card in case of theft or loss",
+            "section_key": "block_card",
+            "list": [
+              {
+                "seq_no": 1,
+                "field_name": "Block Temporarily",
+                "description": "Prevents transaction on the Card",
+                "item_key": "block_temporary",
+                "field_type": "toggle",
+                "toggle_state": false,
+                "authentication": []
+              },
+              {
+                "seq_no": 2,
+                "field_name": "Block Permanent",
+                "description": "Once blocked, card can't be used again",
+                "item_key": "block_permanent",
+                "field_type": "toggle",
+                "toggle_state": false,
+                "authentication": [
+                  {
+                    "authType": "OTP",
+                    "error_message": "OTP failed, Please try again later"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "seq_no": 3,
+            "header": "Card Settings",
+            "description": "Set Card Control",
+            "section_key": "card_settings",
+            "list": [
+              {
+                "seq_no": 3,
+                "field_name": "ATM Withdrawal",
+                "description": "",
+                "item_key": "atm",
+                "api_parameter": "atm",
+                "field_type": "toggle",
+                "toggle_state": false,
+                "authentication": []
+              },
+              {
+                "seq_no": 1,
+                "field_name": "Merchant Outlet",
+                "description": "Offline and POS transactions",
+                "item_key": "pos",
+                "api_parameter": "pos",
+                "field_type": "toggle",
+                "toggle_state": false,
+                "authentication": []
+              },
+              {
+                "seq_no": 2,
+                "field_name": "Online Shopping",
+                "description": "E-commerce Websites and Apps",
+                "item_key": "ecom",
+                "api_parameter": "ecom",
+                "field_type": "toggle",
+                "toggle_state": false,
+                "authentication": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "seq_no": 3,
+        "header_key": "history",
+        "header": "Statements",
+        "sectionList": [
+          {
+            "seq_no": 0,
+            "header": "Current Month",
+            "month": 0
+          },
+          {
+            "seq_no": 1,
+            "header": "Last Month",
+            "month": 1
+          },
+          {
+            "seq_no": 2,
+            "header": "Last 3 Months",
+            "month": 3
+          },
+          {
+            "seq_no": 3,
+            "header": "Last 6 Months",
+            "month": 6
+          },
+          {
+            "seq_no": 4,
+            "header": "Custom date range",
+            "month": -1
+          }
+        ]
+      },
+      {
+        "seq_no": 4,
+        "header_key": "transaction_detail",
+        "header": "Transaction Details",
+        "sectionList": [
+          {
+            "seq_no": 1,
+            "header": "Transaction Details"
+          }
+        ]
+      },
+      {
+        "seq_no": 5,
+        "header_key": "raise_issue",
+        "header": "Raise an Issue",
+        "sectionList": [
+          {
+            "seq_no": 1,
+            "header": "Transaction Details"
+          },
+          {
+            "seq_no": 2,
+            "header": "What is the nature of the issue?",
+            "disputelist": [
+              "Double Debit",
+              "Duplicate Transactions",
+              "Toll Fare Issue",
+              "Vehicle Class Mismatch",
+              "Vehicle Not Crossed",
+              "Exempted Vehicle Transactions",
+              "Others",
+              "Vehicle Status Issue"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

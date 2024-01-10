@@ -1,0 +1,249 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name EDOLensSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import CoreGraphics
+import CoreVideo
+@_exported import EDOLensSDK
+import Foundation
+import MobileCoreServices
+import PDFKit
+import Photos
+import Swift
+import SystemConfiguration
+import UIKit
+import Vision
+import _Concurrency
+import _StringProcessing
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class IGRCropCornerLine : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol EDOLensProtocol : AnyObject {
+  static var shared: EDOLensSDK.EDOLensProtocol { get }
+  var themeColor: Swift.String? { get set }
+  var authKey: Swift.String? { get set }
+  var apiKey: Swift.String? { get set }
+  var baseURL: Swift.String? { get set }
+  func present(from parentController: UIKit.UIViewController)
+  var docType: EDOLensSDK.DocumentType? { get set }
+  var onCompletion: ((_ isMasked: Swift.Bool, _ maskedFileURL: Swift.String, _ formatType: Swift.String) -> Swift.Void)? { get set }
+  func dismiss()
+}
+extension EDOLensSDK.IGRPhotoTweakView : EDOLensSDK.IGRCropViewDelegate {
+  @_Concurrency.MainActor(unsafe) public func cropViewDidStartCrop(_ cropView: EDOLensSDK.IGRCropView)
+  @_Concurrency.MainActor(unsafe) public func cropViewDidMove(_ cropView: EDOLensSDK.IGRCropView)
+  @_Concurrency.MainActor(unsafe) public func cropViewDidStopCrop(_ cropView: EDOLensSDK.IGRCropView)
+  @_Concurrency.MainActor(unsafe) public func cropViewInsideValidFrame(for point: CoreFoundation.CGPoint, from cropView: EDOLensSDK.IGRCropView) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class IGRCropLine : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol IGRPhotoTweakViewControllerDelegate : AnyObject {
+  func photoTweaksController(_ controller: EDOLensSDK.IGRPhotoTweakViewController, didFinishWithCroppedImage croppedImage: UIKit.UIImage)
+  func photoTweaksControllerDidCancel(_ controller: EDOLensSDK.IGRPhotoTweakViewController)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class IGRPhotoTweakViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var image: UIKit.UIImage!
+  @_Concurrency.MainActor(unsafe) weak public var delegate: EDOLensSDK.IGRPhotoTweakViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public var photoView: EDOLensSDK.IGRPhotoTweakView! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func didReceiveMemoryWarning()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor(unsafe) open func setupThemes()
+  @_Concurrency.MainActor(unsafe) public func resetView()
+  @_Concurrency.MainActor(unsafe) public func dismissAction()
+  @_Concurrency.MainActor(unsafe) public func cropAction()
+  @_Concurrency.MainActor(unsafe) open func customBorderColor() -> UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) open func customBorderWidth() -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) open func customCornerBorderWidth() -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) open func customCornerBorderLength() -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) open func customCropLinesCount() -> Swift.Int
+  @_Concurrency.MainActor(unsafe) open func customGridLinesCount() -> Swift.Int
+  @_Concurrency.MainActor(unsafe) open func customIsHighlightMask() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) open func customHighlightMaskAlphaValue() -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) open func customCanvasInsets() -> UIKit.UIEdgeInsets
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension EDOLensSDK.IGRPhotoTweakView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+}
+extension EDOLensSDK.IGRCropView {
+  @_Concurrency.MainActor(unsafe) public func updateCropLines(animate: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func dismissCropLines()
+  @_Concurrency.MainActor(unsafe) public func updateGridLines(animate: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func dismissGridLines()
+}
+extension EDOLensSDK.IGRCropView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchesCancelled(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+}
+public class EDOLens : EDOLensSDK.EDOLensProtocol {
+  public init()
+  public static var shared: EDOLensSDK.EDOLensProtocol
+  public var themeColor: Swift.String?
+  public var authKey: Swift.String?
+  public var apiKey: Swift.String?
+  public var baseURL: Swift.String?
+  public var onCompletion: ((_ isMasked: Swift.Bool, _ maskedFileURL: Swift.String, _ formatType: Swift.String) -> Swift.Void)?
+  public var docType: EDOLensSDK.DocumentType?
+  public func present(from parentController: UIKit.UIViewController)
+  public func dismiss()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class IGRCropGridLine : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension EDOLensSDK.IGRPhotoTweakView {
+  @_Concurrency.MainActor(unsafe) public func changeAngle(radians: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func stopChangeAngle()
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IGRCropCornerView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension EDOLensSDK.IGRPhotoTweakView : UIKit.UIScrollViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillBeginZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?, atScale scale: CoreFoundation.CGFloat)
+}
+extension EDOLensSDK.IGRPhotoTweakView : EDOLensSDK.IGRPhotoScrollViewDelegate {
+  @_Concurrency.MainActor(unsafe) public func scrollViewDidStartUpdateScrollContentOffset(_ scrollView: EDOLensSDK.IGRPhotoScrollView)
+  @_Concurrency.MainActor(unsafe) public func scrollViewDidStopScrollUpdateContentOffset(_ scrollView: EDOLensSDK.IGRPhotoScrollView)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IGRPhotoTweakView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var customizationDelegate: EDOLensSDK.IGRPhotoTweakViewCustomizationDelegate?
+  @_Concurrency.MainActor(unsafe) public var photoContentView: EDOLensSDK.IGRPhotoContentView! {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var photoTranslation: CoreFoundation.CGPoint {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var maximumZoomScale: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var minimumZoomScale: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func resetView()
+  @_Concurrency.MainActor(unsafe) public func applyDeviceRotation()
+  @objc deinit
+}
+extension EDOLensSDK.IGRPhotoTweakView {
+  @_Concurrency.MainActor(unsafe) public func resetAspectRect()
+  @_Concurrency.MainActor(unsafe) public func setCropAspectRect(aspect: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func lockAspectRatio(_ lock: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class IGRCropMaskView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension EDOLensSDK.IGRCropView {
+  @_Concurrency.MainActor(unsafe) public func resetAspectRect()
+  @_Concurrency.MainActor(unsafe) public func setCropAspectRect(aspect: Swift.String, maxSize: CoreFoundation.CGSize)
+  @_Concurrency.MainActor(unsafe) public func lockAspectRatio(_ lock: Swift.Bool)
+}
+extension EDOLensSDK.IGRPhotoTweakViewController {
+  @_Concurrency.MainActor(unsafe) public func resetAspectRect()
+  @_Concurrency.MainActor(unsafe) public func setCropAspectRect(aspect: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func lockAspectRatio(_ lock: Swift.Bool)
+}
+public protocol IGRCropViewDelegate : AnyObject {
+  func cropViewDidStartCrop(_ cropView: EDOLensSDK.IGRCropView)
+  func cropViewDidMove(_ cropView: EDOLensSDK.IGRCropView)
+  func cropViewDidStopCrop(_ cropView: EDOLensSDK.IGRCropView)
+  func cropViewInsideValidFrame(for point: CoreFoundation.CGPoint, from cropView: EDOLensSDK.IGRCropView) -> Swift.Bool
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IGRCropView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class IGRPhotoContentView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var image: UIKit.UIImage! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class IGRRadianAngle : ObjectiveC.NSObject {
+  public static func toRadians(_ degrees: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+  public static func toDegrees(_ radians: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension EDOLensSDK.IGRPhotoTweakViewController : EDOLensSDK.IGRPhotoTweakViewCustomizationDelegate {
+  @_Concurrency.MainActor(unsafe) public func borderColor() -> UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public func borderWidth() -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public func cornerBorderWidth() -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public func cornerBorderLength() -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public func cropLinesCount() -> Swift.Int
+  @_Concurrency.MainActor(unsafe) public func gridLinesCount() -> Swift.Int
+  @_Concurrency.MainActor(unsafe) public func isHighlightMask() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func highlightMaskAlphaValue() -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public func canvasInsets() -> UIKit.UIEdgeInsets
+}
+public enum DocumentType : Swift.String {
+  case pan
+  case aadhaar
+  case both
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension EDOLensSDK.IGRPhotoTweakViewController {
+  @_Concurrency.MainActor(unsafe) public func changeAngle(radians: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func stopChangeAngle()
+}
+public protocol IGRPhotoScrollViewDelegate : AnyObject {
+  func scrollViewDidStartUpdateScrollContentOffset(_ scrollView: EDOLensSDK.IGRPhotoScrollView)
+  func scrollViewDidStopScrollUpdateContentOffset(_ scrollView: EDOLensSDK.IGRPhotoScrollView)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IGRPhotoScrollView : UIKit.UIScrollView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public func checkContentOffset()
+  @_Concurrency.MainActor(unsafe) public func setContentOffsetY(_ offsetY: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func setContentOffsetX(_ offsetX: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var contentOffset: CoreFoundation.CGPoint {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public func zoomScaleToBound() -> CoreFoundation.CGFloat
+  @objc deinit
+}
+public protocol IGRPhotoTweakViewCustomizationDelegate : AnyObject {
+  func borderColor() -> UIKit.UIColor
+  func borderWidth() -> CoreFoundation.CGFloat
+  func cornerBorderWidth() -> CoreFoundation.CGFloat
+  func cornerBorderLength() -> CoreFoundation.CGFloat
+  func cropLinesCount() -> Swift.Int
+  func gridLinesCount() -> Swift.Int
+  func isHighlightMask() -> Swift.Bool
+  func highlightMaskAlphaValue() -> CoreFoundation.CGFloat
+  func canvasInsets() -> UIKit.UIEdgeInsets
+}
+extension EDOLensSDK.DocumentType : Swift.Equatable {}
+extension EDOLensSDK.DocumentType : Swift.Hashable {}
+extension EDOLensSDK.DocumentType : Swift.RawRepresentable {}

@@ -1,0 +1,131 @@
+//
+//  Identifiers.swift
+//  FintechBase
+//
+//  Created by Ranjith Ravichandran on 13/06/22.
+//
+
+import Foundation
+import UIKit
+
+// MARK: ViewController ID
+struct Controller {
+    static let ids = Controller()
+    let initialViewController = "InitialViewController"
+    let noInternetViewController = "NoInternetViewController"
+    let walkThroughViewController = "WalkThroughViewController"
+    let permissionViewController = "PermissionViewController"
+    let mobileNumberViewController = "MobileNumberViewController"
+    let otpViewController = "OTPViewController"
+    let verifyAccountViewController = "VerifyAccountViewController"
+    let accountDetailsViewController = "AccountDetailsViewController"
+    let commonMpinViewController = "CommonMpinViewController"
+    let mpinSuccessViewController = "MPINSuccessViewController"
+    let forgotMPINViewController = "ForgotMPINViewController"
+    let dropDownPopUpViewController = "DropDownPopUpViewController"
+    let dashboardViewController = "DashboardViewController"
+    let tabbarViewController = "TabbarViewController"
+    let vehicleViewController = "VehicleViewController"
+    let transactionViewController = "TransactionViewController"
+    let profileViewController = "ProfileViewController"
+    let addMoneyViewController = "AddMoneyViewController"
+    let paymentMethodViewController = "PaymentMethodViewController"
+    let vehicleDetailsViewController = "VehicleDetailsViewController"
+    let fitmentCertificateViewController = "FitmentCertificateViewController"
+    let replaceFasTagViewController = "ReplaceFasTagViewController"
+    let settingsVC = "SettingsViewController"
+    let cusSupportVC = "CustomerSupportViewController"
+    let trackIssueVC = "TrackIssueViewController"
+    let verifyAadharVC = "VerifyAadharViewController"
+    let updateEmailVC = "UpdateEmailViewController"
+    let otpVerifyVC = "VerifyOTPViewController"
+    let transactionDetailsViewController = "TransactionDetailsViewController"
+    let raiseDisputeViewController = "RaiseDisputeViewController"
+    let resetMpinVC = "ResetMpinViewController"
+    let genericWebViewVC = "GenericWebViewController"
+    let logoutVC = "LogoutViewController"
+    let filterListBottomSheetViewController = "FilterListBottomSheetViewController"
+    let startVideoKYCViewController = "StartVideoKYCViewController"
+    let userConsentViewController = "UserConsentViewController"
+    let payUViewController = "PayUViewController"
+    let vkycWebViewController = "VKYCWebViewController"
+    let upiAppsBottomSheetViewController = "UPIAppsBottomSheetViewController"
+    let accountClosureViewController = "AccountClosureViewController"
+    let reasonsForClosureViewController = "ReasonsForClosureViewController"
+    let fastTagDetailsViewController = "FastTagDetailsViewController"
+    let addAddressViewController = "AddAddressViewController"
+    let uploadDocumentViewController = "UploadDocumentViewController"
+    let bankAccountDetailsViewController = "BankAccountDetailsViewController"
+    let negativeBalanceViewController = "NegativeBalanceViewController"
+    let vehicleDocumentViewController = "VehicleDocumentViewController"
+    let addVehicleViewController = "AddVehicleViewController"
+    let verficationViewController = "VerficationViewController"
+    let requestSubmittedViewController = "RequestSubmittedViewController"
+    let setEmailViewController = "SetEmailViewController"
+    let aadhaarVerificationViewController = "AadhaarVerificationViewController"
+}
+
+// MARK: Cell ID
+struct Cell {
+    static let identifier = Cell()
+    
+    let permissionTableCell = "PermissionTableCell"
+    let cardCollectionViewCell = "CardCollectionViewCell"
+    let accountDetailTableViewCell = "AccountDetailTableViewCell"
+    let dropDownTableViewCell = "DropDownTableViewCell"
+    let recentTransactionTableViewCell = "RecentTransactionTableViewCell"
+    let bannerTableViewCell = "BannerTableViewCell"
+    let bannerCollectionViewCell = "BannerCollectionViewCell"
+    let vehicleDetailsTableViewCell = "VehicleDetailsTableViewCell"
+    let vehicleDetailsCollectionViewCell = "VehicleDetailsCollectionViewCell"
+    let transactionTableViewCell = "TransactionTableViewCell"
+    let cardTableViewCell = "CardTableViewCell"
+    let imageBannerCollectionViewCell = "ImageBannerCollectionViewCell"
+    let otherPaymentListTableViewCell = "OtherPaymentListTableViewCell"
+    let upiListCollectionViewCell = "UPIListCollectionViewCell"
+    let vehicleListTableViewCell = "VehicleListTableViewCell"
+    let vehicleMessageTableViewCell = "VehicleMessageTableViewCell"
+    let vehicleViewDetailsTableViewCell = "VehicleViewDetailsTableViewCell"
+    let profileUpdatesTableViewCell = "ProfileUpdatesTableViewCell"
+    let m2pHeaderViewTableViewCell = "M2PHeaderViewTableViewCell"
+    let m2pDetailsTableViewCell = "M2PDetailsTableViewCell"
+    let m2pDisputeTableViewCell = "M2PDisputeTableViewCell"
+    let m2pDisputeTagTableViewCell = "M2PDisputeTagTableViewCell"
+    let m2pDisputeDescriptionTableViewCell = "M2PDisputeDescriptionTableViewCell"
+    let supportListTableViewCell =  "SupportListTableViewCell"
+    let trackListTableViewCell =  "TrackListTableViewCell"
+    let settingsSections = "SettingsSections"
+    let profileHeaderCell = "ProfileHeaderCell"
+    let profileDetailCell = "ProfileDetailCell"
+    let logoutFooter = "LogoutFooter"
+    let filterListTableViewCell = "FilterListTableViewCell"
+    let notesListTableViewCell = "NotesListTableViewCell"
+    let settingsAccountDetailsTableViewCell = "SettingsAccountDetailsTableViewCell"
+    let upiAppTableViewCell = "UPIAppTableViewCell"
+    let reasonsCellForClosure = "ReasonsCellForClosure"
+    let fastTagFeeBreakdownCell = "FastTagFeeBreakdownCell"
+    let deliveryAddressCell = "DeliveryAddressCell"
+    let addBankCellTableViewCell = "AddBankCellTableViewCell"
+    let notesTableViewCell = "NotesTableViewCell"
+    let proceedCancelButtonTableViewCell = "ProceedCancelButtonTableViewCell"
+    let uploadDocumentTableViewCell = "UploadDocumentTableViewCell"
+    let instructionTableViewCell = "InstructionTableViewCell"
+    let instructionContentTableViewCell = "InstructionContentTableViewCell"
+    let noVehicleCollectionViewCell = "NoVehicleCollectionViewCell"
+    let fastTagPaymentCell = "FastTagPaymentCell"
+    let addAddressCells = "AddAddressCells"
+    let quikPaymentCell = "QuikPaymentCell"
+    let upiListTableViewCell = "UPIListTableViewCell"
+}
+
+// MARK: StoryBoad ID
+struct Storyboard {
+    static let ids = Storyboard()
+    let initial = "Initial"
+    let main = "Main"
+    let dashboard = "Dashboard"
+    let noInternet = "NoInternet"
+    let onboardingStoryboard = "OnboardingStoryboard"
+    let profile = "Profile"
+    let accountClosureStoryBoard = "AccountClosureStoryBoard"
+}

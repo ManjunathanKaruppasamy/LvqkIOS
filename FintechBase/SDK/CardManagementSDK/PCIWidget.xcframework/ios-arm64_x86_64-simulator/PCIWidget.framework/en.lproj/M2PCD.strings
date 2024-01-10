@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "Valid Thru"; ObjectID = "5lm-dT-4vl"; */
+"5lm-dT-4vl.text" = "Valid Thru";
+
+/* Class = "UIButton"; normalTitle = "  Support"; ObjectID = "BWE-Wa-me0"; */
+"BWE-Wa-me0.normalTitle" = "  Support";
+
+/* Class = "UILabel"; text = "**/**"; ObjectID = "DVn-iV-ifX"; */
+"DVn-iV-ifX.text" = "**/**";
+
+/* Class = "UILabel"; text = "***"; ObjectID = "H1C-GU-a9B"; */
+"H1C-GU-a9B.text" = "***";
+
+/* Class = "UILabel"; text = "Q&A"; ObjectID = "HpK-Np-Q2m"; */
+"HpK-Np-Q2m.text" = "Q&A";
+
+/* Class = "UILabel"; text = "Close"; ObjectID = "NEZ-ar-zew"; */
+"NEZ-ar-zew.text" = "Close";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Qa6-F8-5b6"; */
+"Qa6-F8-5b6.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "CVV"; ObjectID = "VDh-q1-tp0"; */
+"VDh-q1-tp0.text" = "CVV";
+
+/* Class = "UILabel"; text = "The Screen will automatically close in 0 sec"; ObjectID = "Y9O-rp-jgf"; */
+"Y9O-rp-jgf.text" = "The Screen will automatically close in 0 sec";
+
+/* Class = "UISegmentedControl"; hQR-Hp-e0Y.segmentTitles[0] = "Manage card"; ObjectID = "hQR-Hp-e0Y"; */
+"hQR-Hp-e0Y.segmentTitles[0]" = "Manage card";
+
+/* Class = "UISegmentedControl"; hQR-Hp-e0Y.segmentTitles[1] = "Transaction Limit"; ObjectID = "hQR-Hp-e0Y"; */
+"hQR-Hp-e0Y.segmentTitles[1]" = "Transaction Limit";
+
+/* Class = "UILabel"; text = "Close"; ObjectID = "hsE-5S-fPv"; */
+"hsE-5S-fPv.text" = "Close";
+
+/* Class = "UIButton"; normalTitle = "Hide CVV"; ObjectID = "mjh-wp-uDT"; */
+"mjh-wp-uDT.normalTitle" = "إخفاء CVV";

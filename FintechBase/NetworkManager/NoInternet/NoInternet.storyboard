@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--No Internet View Controller-->
+        <scene sceneID="ujl-dT-phA">
+            <objects>
+                <viewController storyboardIdentifier="NoInternetViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TYw-Qu-YVO" customClass="NoInternetViewController" customModule="FintechBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GMX-WG-APb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noNetwork" translatesAutoresizingMaskIntoConstraints="NO" id="02P-cc-c4D">
+                                <rect key="frame" x="123.5" y="110.5" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="f6g-0n-VFh"/>
+                                    <constraint firstAttribute="width" constant="128" id="yON-7y-QZ9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Internet Connection!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQR-3v-gLq">
+                                <rect key="frame" x="102" y="288.5" width="171" height="19"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                <color key="textColor" red="0.10980392160000001" green="0.1137254902" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check your connection and try again!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmp-Ff-WAA">
+                                <rect key="frame" x="20" y="323.5" width="335" height="12"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                <color key="textColor" red="0.10980392160000001" green="0.1137254902" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Oz-m3-OqW">
+                                <rect key="frame" x="99.5" y="375.5" width="176" height="56"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="Ewk-WV-8xi"/>
+                                    <constraint firstAttribute="height" constant="56" id="aPd-SS-S0A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                <state key="normal" title="Try Again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tryAgainAction:" destination="TYw-Qu-YVO" eventType="touchUpInside" id="QzC-bb-R7H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uwl-vk-wsd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Oz-m3-OqW" firstAttribute="top" secondItem="cmp-Ff-WAA" secondAttribute="bottom" constant="40" id="4fz-3h-pYP"/>
+                            <constraint firstItem="1Oz-m3-OqW" firstAttribute="centerX" secondItem="GMX-WG-APb" secondAttribute="centerX" id="9gk-O4-d1S"/>
+                            <constraint firstItem="EQR-3v-gLq" firstAttribute="centerX" secondItem="GMX-WG-APb" secondAttribute="centerX" id="Iz3-Oh-JrU"/>
+                            <constraint firstItem="EQR-3v-gLq" firstAttribute="top" secondItem="02P-cc-c4D" secondAttribute="bottom" constant="50" id="Kpd-Vy-IB0"/>
+                            <constraint firstItem="02P-cc-c4D" firstAttribute="centerX" secondItem="GMX-WG-APb" secondAttribute="centerX" id="abJ-Z4-n4w"/>
+                            <constraint firstItem="1Oz-m3-OqW" firstAttribute="centerY" secondItem="GMX-WG-APb" secondAttribute="centerY" constant="70" id="cm3-NU-8a1"/>
+                            <constraint firstItem="cmp-Ff-WAA" firstAttribute="top" secondItem="EQR-3v-gLq" secondAttribute="bottom" constant="16" id="crB-1g-ghR"/>
+                            <constraint firstItem="cmp-Ff-WAA" firstAttribute="leading" secondItem="uwl-vk-wsd" secondAttribute="leading" constant="20" id="mQT-6n-qdv"/>
+                            <constraint firstItem="uwl-vk-wsd" firstAttribute="trailing" secondItem="cmp-Ff-WAA" secondAttribute="trailing" constant="20" id="uuk-cD-lg2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="subTitleLbl" destination="cmp-Ff-WAA" id="bAz-Dg-YJY"/>
+                        <outlet property="titleLabel" destination="EQR-3v-gLq" id="k7I-hb-Jfb"/>
+                        <outlet property="tryAgainButton" destination="1Oz-m3-OqW" id="rsC-9w-XYp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jup-23-0yh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="noNetwork" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="InstructionTableViewCell" customModule="FintechBase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sF-ea-9aa">
+                        <rect key="frame" x="0.0" y="10" width="320" height="230"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When uploading your RC please make ensure the following." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sc0-EQ-2dR">
+                                <rect key="frame" x="16" y="16" width="288" height="28.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vn0-CX-tuo">
+                                <rect key="frame" x="0.0" y="52.666666666666671" width="320" height="162.33333333333331"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.63137254901960782" blue="0.035294117647058823" alpha="0.096957781456953648" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="sc0-EQ-2dR" firstAttribute="top" secondItem="9sF-ea-9aa" secondAttribute="top" constant="16" id="58V-Fw-Gr5"/>
+                            <constraint firstItem="Vn0-CX-tuo" firstAttribute="leading" secondItem="9sF-ea-9aa" secondAttribute="leading" id="klv-Jr-hc9"/>
+                            <constraint firstAttribute="trailing" secondItem="sc0-EQ-2dR" secondAttribute="trailing" constant="16" id="p2b-Ir-SlX"/>
+                            <constraint firstAttribute="trailing" secondItem="Vn0-CX-tuo" secondAttribute="trailing" id="sfk-bK-CxM"/>
+                            <constraint firstAttribute="bottom" secondItem="Vn0-CX-tuo" secondAttribute="bottom" constant="15" id="vfu-Zd-Alb"/>
+                            <constraint firstItem="Vn0-CX-tuo" firstAttribute="top" secondItem="sc0-EQ-2dR" secondAttribute="bottom" constant="8" id="x2D-Sz-zUT"/>
+                            <constraint firstItem="sc0-EQ-2dR" firstAttribute="leading" secondItem="9sF-ea-9aa" secondAttribute="leading" constant="16" id="yBZ-zh-Kjb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="9sF-ea-9aa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="7d7-mo-wFM"/>
+                    <constraint firstAttribute="bottom" secondItem="9sF-ea-9aa" secondAttribute="bottom" constant="10" id="F4S-Ih-fDz"/>
+                    <constraint firstAttribute="trailing" secondItem="9sF-ea-9aa" secondAttribute="trailing" id="VkW-Ha-sIb"/>
+                    <constraint firstItem="9sF-ea-9aa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="p98-SY-3xr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="instructionContentTableView" destination="Vn0-CX-tuo" id="46E-zf-nvI"/>
+                <outlet property="titleLabel" destination="sc0-EQ-2dR" id="Ve8-iE-OT5"/>
+                <outlet property="viewContent" destination="9sF-ea-9aa" id="bZF-pi-BTU"/>
+            </connections>
+            <point key="canvasLocation" x="-76" y="-12"/>
+        </tableViewCell>
+    </objects>
+</document>

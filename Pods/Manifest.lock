@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (5.4.4)
+  - CryptoSwift (1.4.3)
+  - IQKeyboardManagerSwift (6.5.10)
+  - ObjectMapper (3.5.3)
+  - ZVActivityIndicatorView (1.0.0)
+  - ZVProgressHUD (3.0.6):
+    - ZVActivityIndicatorView
+
+DEPENDENCIES:
+  - Alamofire (~> 5.4.3)
+  - CryptoSwift (~> 1.4.1)
+  - IQKeyboardManagerSwift
+  - ObjectMapper (~> 3.5)
+  - ZVProgressHUD (~> 3.0.4)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CryptoSwift
+    - IQKeyboardManagerSwift
+    - ObjectMapper
+    - ZVActivityIndicatorView
+    - ZVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  CryptoSwift: a0799ee936271bd2253a006f1e4523df21845000
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  ZVActivityIndicatorView: fea0b3a8d8e0f54a106db3c6d543f7d5444cd9ea
+  ZVProgressHUD: dfa70d6d3a0ba98826f2fd9b73d2e2b01a69967e
+
+PODFILE CHECKSUM: b7bf3c4b97a22af364c8c695197b5d2913b9fe84
+
+COCOAPODS: 1.12.1

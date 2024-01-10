@@ -1,0 +1,90 @@
+
+/* Class = "UILabel"; text = "Control Card"; ObjectID = "1U1-Aa-8X9"; */
+"1U1-Aa-8X9.text" = "Control Card";
+
+/* Class = "UILabel"; text = "Expiry"; ObjectID = "5lm-dT-4vl"; */
+"5lm-dT-4vl.text" = "Expiry";
+
+/* Class = "UILabel"; text = "Control Card"; ObjectID = "8Nf-1l-EoQ"; */
+"8Nf-1l-EoQ.text" = "Control Card";
+
+/* Class = "UILabel"; text = "Set / Modify Limit "; ObjectID = "8On-d6-cEk"; */
+"8On-d6-cEk.text" = "Set / Modify Limit ";
+
+/* Class = "UILabel"; text = "Transaction Details"; ObjectID = "9V3-wB-uyJ"; */
+"9V3-wB-uyJ.text" = "Transaction Details";
+
+/* Class = "UIButton"; normalTitle = "View all"; ObjectID = "ACa-6G-EgX"; */
+"ACa-6G-EgX.normalTitle" = "View all";
+
+/* Class = "UILabel"; text = "No transactions found"; ObjectID = "APH-lC-rZq"; */
+"APH-lC-rZq.text" = "No transactions found";
+
+/* Class = "UIButton"; normalTitle = "  Support"; ObjectID = "BWE-Wa-me0"; */
+"BWE-Wa-me0.normalTitle" = "  Support";
+
+/* Class = "UILabel"; text = "Statements"; ObjectID = "Bhh-86-TzM"; */
+"Bhh-86-TzM.text" = "Statements";
+
+/* Class = "UILabel"; text = "**/**"; ObjectID = "DVn-iV-ifX"; */
+"DVn-iV-ifX.text" = "**/**";
+
+/* Class = "UILabel"; text = "Manage limits to control spending for different types of transactions."; ObjectID = "DuB-KK-hpd"; */
+"DuB-KK-hpd.text" = "Manage limits to control spending for different types of transactions.";
+
+/* Class = "UILabel"; text = "Transaction Limit"; ObjectID = "EDI-Q1-dSw"; */
+"EDI-Q1-dSw.text" = "Transaction Limit";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "EqI-7G-WLh"; */
+"EqI-7G-WLh.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "XXX"; ObjectID = "H1C-GU-a9B"; */
+"H1C-GU-a9B.text" = "XXX";
+
+/* Class = "UILabel"; text = "Q&A"; ObjectID = "HpK-Np-Q2m"; */
+"HpK-Np-Q2m.text" = "Q&A";
+
+/* Class = "UILabel"; text = "Your card has been locked temporarily"; ObjectID = "OIh-ir-5io"; */
+"OIh-ir-5io.text" = "Your card has been locked temporarily";
+
+/* Class = "UILabel"; text = "No Transactions found"; ObjectID = "Osc-M6-ME8"; */
+"Osc-M6-ME8.text" = "No Transactions found";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Qa6-F8-5b6"; */
+"Qa6-F8-5b6.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "CVV"; ObjectID = "VDh-q1-tp0"; */
+"VDh-q1-tp0.text" = "CVV";
+
+/* Class = "UILabel"; text = "Last Month"; ObjectID = "X6d-e8-Oqi"; */
+"X6d-e8-Oqi.text" = "Last Month";
+
+/* Class = "UILabel"; text = "The Screen will automatically close in 0 sec"; ObjectID = "Y9O-rp-jgf"; */
+"Y9O-rp-jgf.text" = "The Screen will automatically close in 0 sec";
+
+/* Class = "UILabel"; text = "Recent Transactions"; ObjectID = "crs-3M-99f"; */
+"crs-3M-99f.text" = "Recent Transactions";
+
+/* Class = "UILabel"; text = "Transaction Limit"; ObjectID = "etv-FN-Pbv"; */
+"etv-FN-Pbv.text" = "Transaction Limit";
+
+/* Class = "UILabel"; text = "Close"; ObjectID = "hsE-5S-fPv"; */
+"hsE-5S-fPv.text" = "Close";
+
+/* Class = "UIButton"; normalTitle = " "; ObjectID = "mjh-wp-uDT"; */
+"mjh-wp-uDT.normalTitle" = " ";
+
+/* Class = "UILabel"; text = "Filter by"; ObjectID = "ppH-ue-GDO"; */
+"ppH-ue-GDO.text" = "Filter by";
+
+/* Class = "UILabel"; text = "Raise an Issue"; ObjectID = "s6w-MA-Clc"; */
+"s6w-MA-Clc.text" = "Raise an Issue";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wXP-QS-QMU"; */
+"wXP-QS-QMU.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wkb-qE-ca8"; */
+"wkb-qE-ca8.text" = "Label";
+
+/* Class = "UILabel"; text = "Select Range"; ObjectID = "yL8-Vj-Bx2"; */
+"yL8-Vj-Bx2.text" = "Select Range";

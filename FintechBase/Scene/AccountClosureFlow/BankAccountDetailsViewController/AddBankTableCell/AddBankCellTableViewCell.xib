@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="115" id="iar-j3-UN0" customClass="AddBankCellTableViewCell" customModule="FintechBase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iar-j3-UN0" id="9Zf-qM-lxl">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMO-Li-5ch" customClass="CustomFloatingTextField" customModule="FintechBase" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="115"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="115" id="JGz-wb-xuV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="fMO-Li-5ch" firstAttribute="top" secondItem="9Zf-qM-lxl" secondAttribute="top" id="39x-hC-pCm"/>
+                    <constraint firstAttribute="bottom" secondItem="fMO-Li-5ch" secondAttribute="bottom" id="D0X-Bw-XZO"/>
+                    <constraint firstItem="fMO-Li-5ch" firstAttribute="leading" secondItem="9Zf-qM-lxl" secondAttribute="leading" id="abB-q8-13R"/>
+                    <constraint firstAttribute="trailing" secondItem="fMO-Li-5ch" secondAttribute="trailing" id="zxc-F3-Mj4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="rtD-te-nA2"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="customTextfieldView" destination="fMO-Li-5ch" id="Uue-Wy-BIi"/>
+            </connections>
+            <point key="canvasLocation" x="47.328244274809158" y="29.225352112676056"/>
+        </tableViewCell>
+    </objects>
+</document>

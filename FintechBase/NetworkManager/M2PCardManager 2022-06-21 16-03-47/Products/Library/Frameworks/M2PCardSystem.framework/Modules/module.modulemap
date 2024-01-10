@@ -1,0 +1,11 @@
+framework module M2PCardSystem {
+  umbrella header "M2PCardSystem.h"
+
+  export *
+  module * { export * }
+}
+
+module M2PCardSystem.Swift {
+    header "M2PCardSystem-Swift.h"
+    requires objc
+}

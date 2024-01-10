@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="172" id="KGk-i7-Jjw" customClass="QuikPaymentCell" customModule="FintechBase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="172"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="334" height="172"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quik Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiP-Mb-2eI">
+                        <rect key="frame" x="18" y="25" width="95" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="9b1-pb-Ych"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qucik_img" translatesAutoresizingMaskIntoConstraints="NO" id="6hP-sG-dKD">
+                        <rect key="frame" x="121" y="27" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="V8s-1y-Skc"/>
+                            <constraint firstAttribute="width" constant="16" id="cUl-bt-Ahc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make a payment with just one click using your wallet balance." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUq-ZH-Jzg">
+                        <rect key="frame" x="18" y="50" width="308" height="26.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAE-Nb-5EO">
+                        <rect key="frame" x="18" y="88.333333333333329" width="300" height="69.999999999999986"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wallet_graybg" translatesAutoresizingMaskIntoConstraints="NO" id="1l1-h3-8vp">
+                                <rect key="frame" x="15" y="19" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="fFV-sF-GeC"/>
+                                    <constraint firstAttribute="height" constant="32" id="kPf-UR-ucb"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Poa-WC-JES">
+                                <rect key="frame" x="63" y="9.9999999999999964" width="203" height="45.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay via QWallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3Q-Xt-1vj">
+                                        <rect key="frame" x="0.0" y="0.0" width="117" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available balance: ₹ 200.00 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTi-WS-oQz">
+                                        <rect key="frame" x="0.0" y="25.333333333333343" width="170.33333333333334" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="C7J-1n-tNs">
+                                <rect key="frame" x="274" y="27" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="LxB-e3-aSQ"/>
+                                    <constraint firstAttribute="width" constant="16" id="kE9-tp-aNb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1l1-h3-8vp" firstAttribute="leading" secondItem="pAE-Nb-5EO" secondAttribute="leading" constant="15" id="7Iy-mk-4Yp"/>
+                            <constraint firstItem="Poa-WC-JES" firstAttribute="top" secondItem="pAE-Nb-5EO" secondAttribute="top" constant="10" id="9hV-0I-gzw"/>
+                            <constraint firstItem="C7J-1n-tNs" firstAttribute="leading" secondItem="Poa-WC-JES" secondAttribute="trailing" constant="8" id="Ggv-YE-gKU"/>
+                            <constraint firstAttribute="trailing" secondItem="C7J-1n-tNs" secondAttribute="trailing" constant="10" id="Mau-aC-8t1"/>
+                            <constraint firstItem="Poa-WC-JES" firstAttribute="leading" secondItem="1l1-h3-8vp" secondAttribute="trailing" constant="16" id="W7v-bM-UVi"/>
+                            <constraint firstAttribute="height" constant="70" id="qg5-eB-1Fj"/>
+                            <constraint firstItem="C7J-1n-tNs" firstAttribute="centerY" secondItem="pAE-Nb-5EO" secondAttribute="centerY" id="tbY-RI-aoS"/>
+                            <constraint firstItem="1l1-h3-8vp" firstAttribute="centerY" secondItem="pAE-Nb-5EO" secondAttribute="centerY" id="zgz-cf-sZq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="pAE-Nb-5EO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="4zL-zA-OEp"/>
+                    <constraint firstAttribute="trailing" secondItem="qUq-ZH-Jzg" secondAttribute="trailing" constant="8" id="5uj-4A-JUa"/>
+                    <constraint firstItem="pAE-Nb-5EO" firstAttribute="top" secondItem="qUq-ZH-Jzg" secondAttribute="bottom" constant="12" id="Anr-kO-Wch"/>
+                    <constraint firstItem="qUq-ZH-Jzg" firstAttribute="top" secondItem="WiP-Mb-2eI" secondAttribute="bottom" constant="5" id="CXY-y4-EoU"/>
+                    <constraint firstItem="6hP-sG-dKD" firstAttribute="leading" secondItem="WiP-Mb-2eI" secondAttribute="trailing" constant="8" id="ISs-FW-Hyu"/>
+                    <constraint firstAttribute="trailing" secondItem="pAE-Nb-5EO" secondAttribute="trailing" constant="16" id="RIA-Zz-EmA"/>
+                    <constraint firstItem="WiP-Mb-2eI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="f7j-gE-N1D"/>
+                    <constraint firstItem="6hP-sG-dKD" firstAttribute="centerY" secondItem="WiP-Mb-2eI" secondAttribute="centerY" id="fFx-Up-8Q0"/>
+                    <constraint firstItem="WiP-Mb-2eI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="qKZ-7Z-cRW"/>
+                    <constraint firstAttribute="bottom" secondItem="pAE-Nb-5EO" secondAttribute="bottom" constant="13.67" id="sly-FU-cEf"/>
+                    <constraint firstItem="qUq-ZH-Jzg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="v6Z-IU-KbF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="customView" destination="pAE-Nb-5EO" id="rYz-Jc-Igc"/>
+                <outlet property="payViaQWalletLabel" destination="U3Q-Xt-1vj" id="olC-YU-16T"/>
+                <outlet property="qucikPaymentDescLabel" destination="qUq-ZH-Jzg" id="5Bh-T2-zFa"/>
+                <outlet property="quickImage" destination="6hP-sG-dKD" id="iua-bR-Pz3"/>
+                <outlet property="quikPaymentTitleLabel" destination="WiP-Mb-2eI" id="dOT-S7-fw1"/>
+                <outlet property="rightArrowImage" destination="C7J-1n-tNs" id="YEN-Ox-Dnr"/>
+                <outlet property="walletBalanceLabel" destination="YTi-WS-oQz" id="8jy-cH-533"/>
+                <outlet property="walletImage" destination="1l1-h3-8vp" id="TX2-PO-U7Y"/>
+            </connections>
+            <point key="canvasLocation" x="-71.755725190839698" y="43.661971830985919"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Wallet_graybg" width="32.333332061767578" height="32"/>
+        <image name="qucik_img" width="16" height="16"/>
+        <image name="rightArrow" width="20" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
